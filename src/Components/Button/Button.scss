@@ -1,0 +1,43 @@
+.btn {
+    border: 2px solid #A6C36F;
+    background-color: #A6C36F;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    border-radius: 35px;
+    &.btn-sm{
+        height: 36px;
+        width: 72px;
+        font-size: 12px;
+    }
+    &.btn-md{
+        height: 48px;
+        width: 96px;
+        font-size: 16px;
+    }
+    &.btn-lg{
+        height: 60px;
+        width: 120px;
+        font-size: 20px;
+    }
+    &.btn-xl{
+        height: 72px;
+        width: 144px;
+        font-size: 24px;
+
+    }
+    &:focus{
+        outline: 0;
+    }
+
+    span{
+        margin: auto;
+        border-radius: 5px;
+        color: #1E352F;
+        font-weight: bold;
+    }
+    &:hover{
+        background-color: #BEEF9E;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,26 @@
+.search-icon{
+    height: 36px;
+    width: 36px;
+    color: #cecece;
+    position: relative;
+    left: 15px;
+    top: 3px;
+}
+
+.search-field{
+    height: 40px;
+    width: 800px;
+    border-radius: 15px;
+    font-size: 18px;
+    border: 1px solid #cecece;
+    position: fixed;
+    padding-left: 60px;
+    &:focus{
+        outline: none;
+    }
+}
+
+.search-container{
+    width: 800px;
+    margin: auto;
+}
