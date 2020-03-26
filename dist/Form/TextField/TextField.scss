@@ -1,0 +1,28 @@
+.text-input{
+    min-width: 100px;
+    min-height: 20px;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid #fff;
+    &:focus{
+        outline: none;
+    }
+    &.sm{
+        min-width: 60px;
+    }
+    &.lg{
+        min-height: 40px;
+        min-width: 400px;
+    }
+    &.xl{
+        min-height: 60px;
+        min-width: 600px;
+    }
+}
+
+.text-input-label{
+    font-size: 18px;
+    font-weight: bold;
+}

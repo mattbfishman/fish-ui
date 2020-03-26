@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import Login from './Components/Form/Login/Login';
-import SearchField from './Components/Form/Search/SearchField';
+import Table from './Components/Table/Table';
 
 class App extends Component {
     render(){
@@ -13,7 +13,7 @@ class App extends Component {
                 <TextField label={"Test Label"} size={'lg'}/>
                 <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
                 {/* <Login/> */}
-                <SearchField/>
+                <Table/>
             </div>
         );
     }
