@@ -1,6 +1,6 @@
 {
   "name": "fish-ui-ac",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "dependencies": {
     "classnames": "^2.2.6",
@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "del -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
+    "publish:npm": "del dist && mkdir dist &&  babel src/components -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
