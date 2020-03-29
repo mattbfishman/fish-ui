@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 // import Login from './Components/Form/Login/Login';
 import Card from './Components/Card/Card';
 import {Fish} from '@styled-icons/fa-solid/Fish';
+import SearchField from './Components/Form/Search/SearchField';
 
 // @styled-icons/fa-solid/Fish
 class App extends Component {
@@ -25,7 +26,8 @@ class App extends Component {
                 <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
                 {/* <Login/> */}
                 {/* <Table rows={rowData}/> */}
-            <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/>
+            {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
+            <SearchField/>
             </div>
         );
     }

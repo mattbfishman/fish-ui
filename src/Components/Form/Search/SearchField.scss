@@ -2,7 +2,7 @@
     height: 36px;
     width: 36px;
     color: #cecece;
-    position: relative;
+    position: absolute;
     left: 15px;
     top: 3px;
 }
@@ -13,7 +13,6 @@
     border-radius: 15px;
     font-size: 18px;
     border: 1px solid #cecece;
-    position: fixed;
     padding-left: 60px;
     &:focus{
         outline: none;
@@ -23,4 +22,9 @@
 .search-container{
     width: 800px;
     margin: auto;
+    height: 4000px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
