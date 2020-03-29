@@ -35,7 +35,6 @@ class Card extends Component {
 
 Card.propTypes = {
   title: PropTypes.string,
-  typeLogo: PropTypes.elementType,
   price: PropTypes.string,
   type: PropTypes.string
 };
