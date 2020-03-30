@@ -6,6 +6,12 @@ import SearchField from './Components/Form/Search/SearchField';
 
 // @styled-icons/fa-solid/Fish
 class App extends Component {
+
+    filter(e){
+        console.log(e.target.value);
+        // console.log("TEST");
+    }
+
     render(){
         // var rowData = [
         //     ["Dab","300","Fish"  ],
@@ -27,7 +33,7 @@ class App extends Component {
                 {/* <Login/> */}
                 {/* <Table rows={rowData}/> */}
             {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
-            <SearchField/>
+            <SearchField filter={this.filter} placeholder={"Search for a price"}/>
             </div>
         );
     }

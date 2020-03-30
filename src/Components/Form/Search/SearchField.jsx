@@ -7,9 +7,15 @@ var classNames = require('classnames');
 
 class SearchField extends Component {
     render(){
+        var me          = this,
+            props       = me && me.props,
+            filter      = props && props.filter,
+            placeholder = props && props.placeholder;
+
+        console.log(filter);
         return(
             <div className="search-container">
-                <input placeholder="Search for a price" className="search-field"/>
+                <input onKeyPress={(e) => filter(e)} placeholder={placeholder} className="search-field"/>
                 <Search className="search-icon" />
             </div>
         )
@@ -17,14 +23,12 @@ class SearchField extends Component {
     
 }
 
-// TextField.propTypes = {
-//     size: PropTypes.string,
-//     placeholder: PropTypes.string
-// }
+SearchField.propTypes = {
+    placeholder: PropTypes.string
+}
 
-// TextField.defaultProps = {
-//     placeholder: '',
-//     size: 'md'
-// }
+SearchField.defaultProps = {
+    placeholder: ''
+}
 
 export default SearchField;

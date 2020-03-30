@@ -7,6 +7,11 @@ var classNames = require('classnames');
 
 class SearchField extends Component {
   render() {
+    var me = this,
+        props = me && me.props,
+        filter = props && props.filter,
+        placeholder = props && props.placeholder;
+    console.log(filter);
     return (
       /*#__PURE__*/
       React.createElement("div", {
@@ -14,7 +19,8 @@ class SearchField extends Component {
       },
       /*#__PURE__*/
       React.createElement("input", {
-        placeholder: "Search for a price",
+        onKeyPress: e => filter(e),
+        placeholder: placeholder,
         className: "search-field"
       }),
       /*#__PURE__*/
@@ -24,14 +30,12 @@ class SearchField extends Component {
     );
   }
 
-} // TextField.propTypes = {
-//     size: PropTypes.string,
-//     placeholder: PropTypes.string
-// }
-// TextField.defaultProps = {
-//     placeholder: '',
-//     size: 'md'
-// }
+}
 
-
+SearchField.propTypes = {
+  placeholder: PropTypes.string
+};
+SearchField.defaultProps = {
+  placeholder: ''
+};
 export default SearchField;

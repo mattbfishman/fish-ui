@@ -34,7 +34,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
     title: '',
-    price: '',
+    price: 'N/A',
     type:''
 }
 
