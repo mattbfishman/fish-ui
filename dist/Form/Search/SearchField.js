@@ -11,7 +11,6 @@ class SearchField extends Component {
         props = me && me.props,
         filter = props && props.filter,
         placeholder = props && props.placeholder;
-    console.log(filter);
     return (
       /*#__PURE__*/
       React.createElement("div", {

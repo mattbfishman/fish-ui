@@ -12,7 +12,6 @@ class SearchField extends Component {
             filter      = props && props.filter,
             placeholder = props && props.placeholder;
 
-        console.log(filter);
         return(
             <div className="search-container">
                 <input onKeyPress={(e) => filter(e)} placeholder={placeholder} className="search-field"/>
