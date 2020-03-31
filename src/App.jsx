@@ -13,7 +13,10 @@ class App extends Component {
     //     console.log(e.target.value);
     //     // console.log("TEST");
     // }
-
+    test(event){
+        console.log(event.target.checked);
+        debugger;
+    }
     render(){
         // var rowData = [
         //     ["Dab","300","Fish"  ],
@@ -25,9 +28,9 @@ class App extends Component {
         //     ["Bitterling","900","Fish"  ],
         //     ["Loach","400","Fish"  ]];
         var checkboxes = [
-            {label: "Fish"},
-            {label: "Insect"},
-            {label: "Misc"}
+            {label: "Fish", name: "fish"},
+            {label: "Insect", name:"insect"},
+            {label: "Misc", name:"misc"}
         ]
         return( 
             <div>
@@ -41,7 +44,7 @@ class App extends Component {
                 {/* <Table rows={rowData}/> */}
             {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
             {/* <SearchField filter={this.filter} placeholder={"Search for a price"}/> */}
-            <FilterField checkboxes={checkboxes}/>
+            <FilterField checkboxes={checkboxes} changeFilter={this.test}/>
             </div>
         );
     }

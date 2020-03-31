@@ -32,6 +32,7 @@ class FilterField extends Component {
         toggleHidden = me && me.toggleHidden,
         show = state && state.show,
         checkboxes = props && props.checkboxes,
+        changeFilter = props && props.changeFilter,
         filterDisplay = classNames({
       'filter-display': true,
       'hidden': show === false
@@ -41,6 +42,7 @@ class FilterField extends Component {
         /*#__PURE__*/
         React.createElement(Checkbox, {
           key: index,
+          name: checkbox.name,
           label: checkbox.label
         })
       );
@@ -57,7 +59,10 @@ class FilterField extends Component {
       }),
       /*#__PURE__*/
       React.createElement("div", {
-        className: filterDisplay
+        className: filterDisplay,
+        onChange: e => {
+          changeFilter(e);
+        }
       }, checkboxEle))
     );
   }
@@ -65,7 +70,8 @@ class FilterField extends Component {
 }
 
 FilterField.propTypes = {
-  checkboxes: PropTypes.array
+  checkboxes: PropTypes.array,
+  changeFilter: PropTypes.func.isRequired
 };
 FilterField.defaultProps = {
   checkboxes: []

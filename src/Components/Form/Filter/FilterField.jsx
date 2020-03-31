@@ -33,18 +33,19 @@ class FilterField extends Component {
             toggleHidden  = me && me.toggleHidden,
             show          = state && state.show,
             checkboxes    = props && props.checkboxes,
+            changeFilter  = props && props.changeFilter,
             filterDisplay = classNames({
                 'filter-display'    : true,
                 'hidden'            : show === false
             }),
             checkboxEle   = map(checkboxes, function(checkbox, index){
-                return <Checkbox key={index} label={checkbox.label}/>
+                return <Checkbox key={index} name={checkbox.name} label={checkbox.label}/>
             });
 
         return(
             <div className="filter-container">
                 <FilterList onClick={toggleHidden} className="filter-icon"/>
-                <div className={filterDisplay}>
+                <div className={filterDisplay} onChange={(e) => {changeFilter(e)}}>
                     {checkboxEle}
                 </div>
             </div>
@@ -54,7 +55,8 @@ class FilterField extends Component {
 }
 
 FilterField.propTypes = {
-    checkboxes: PropTypes.array
+    checkboxes: PropTypes.array,
+    changeFilter: PropTypes.func.isRequired
 }
 
 FilterField.defaultProps = {

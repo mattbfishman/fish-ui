@@ -6,7 +6,8 @@ class Checkbox extends Component {
   render() {
     var me = this,
         props = me && me.props,
-        label = props && props.label;
+        label = props && props.label,
+        name = props && props.name;
     return (
       /*#__PURE__*/
       React.createElement("div", {
@@ -14,6 +15,7 @@ class Checkbox extends Component {
       },
       /*#__PURE__*/
       React.createElement("input", {
+        name: name,
         type: "checkbox"
       }),
       /*#__PURE__*/
@@ -24,9 +26,11 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
-  label: PropTypes.string
+  label: PropTypes.string,
+  name: PropTypes.string
 };
 Checkbox.defaultProps = {
-  label: ''
+  label: '',
+  name: ''
 };
 export default Checkbox;

@@ -6,11 +6,12 @@ class Checkbox extends Component {
     render(){
         var me          = this,
             props       = me && me.props,
-            label       = props && props.label;
+            label       = props && props.label,
+            name        = props && props.name;
 
         return (
             <div className="checkbox-container">
-                <input type="checkbox"/>
+                <input name={name} type="checkbox"/>
                 <label>{label}</label>
             </div>
         );
@@ -18,11 +19,13 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
-    label: PropTypes.string
+    label: PropTypes.string,
+    name: PropTypes.string
 }
 
 Checkbox.defaultProps = {
-    label: ''
+    label: '',
+    name: ''
 }
 
 export default Checkbox;
