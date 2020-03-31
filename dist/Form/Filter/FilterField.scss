@@ -1,0 +1,19 @@
+.filter-icon{
+    height: 36px;
+    width: 36px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.filter-display{
+    min-height: 50px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    &.hidden{
+        display: none;
+    }
+}

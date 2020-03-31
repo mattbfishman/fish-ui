@@ -14,7 +14,7 @@ class SearchField extends Component {
 
         return(
             <div className="search-container">
-                <input onKeyPress={(e) => filter(e)} placeholder={placeholder} className="search-field"/>
+                <input onKeyUp={(e) => filter(e)} placeholder={placeholder} className="search-field"/>
                 <Search className="search-icon" />
             </div>
         )

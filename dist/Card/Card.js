@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'; // import map from 'lodash/map';
-
+import PropTypes from 'prop-types';
 import './Card.scss';
-
-var classNames = require('classnames');
 
 class Card extends Component {
   render() {

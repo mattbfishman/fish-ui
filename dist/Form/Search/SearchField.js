@@ -18,7 +18,7 @@ class SearchField extends Component {
       },
       /*#__PURE__*/
       React.createElement("input", {
-        onKeyPress: e => filter(e),
+        onKeyUp: e => filter(e),
         placeholder: placeholder,
         className: "search-field"
       }),

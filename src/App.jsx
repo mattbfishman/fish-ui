@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
 // import Login from './Components/Form/Login/Login';
-import Card from './Components/Card/Card';
-import {Fish} from '@styled-icons/fa-solid/Fish';
-import SearchField from './Components/Form/Search/SearchField';
+// import Card from './Components/Card/Card';
+// import {Fish} from '@styled-icons/fa-solid/Fish';
+// import SearchField from './Components/Form/Search/SearchField';
+import FilterField from './Components/Form/Filter/FilterField';
+
 
 // @styled-icons/fa-solid/Fish
 class App extends Component {
 
-    filter(e){
-        console.log(e.target.value);
-        // console.log("TEST");
-    }
+    // filter(e){
+    //     console.log(e.target.value);
+    //     // console.log("TEST");
+    // }
 
     render(){
         // var rowData = [
@@ -22,6 +24,11 @@ class App extends Component {
         //     ["Horse Mackerel","150","Fish"  ],
         //     ["Bitterling","900","Fish"  ],
         //     ["Loach","400","Fish"  ]];
+        var checkboxes = [
+            {label: "Fish"},
+            {label: "Insect"},
+            {label: "Misc"}
+        ]
         return( 
             <div>
                 {/* <Button size={'sm'}/>
@@ -33,7 +40,8 @@ class App extends Component {
                 {/* <Login/> */}
                 {/* <Table rows={rowData}/> */}
             {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
-            <SearchField filter={this.filter} placeholder={"Search for a price"}/>
+            {/* <SearchField filter={this.filter} placeholder={"Search for a price"}/> */}
+            <FilterField checkboxes={checkboxes}/>
             </div>
         );
     }
