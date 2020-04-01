@@ -1,6 +1,6 @@
 {
   "name": "fish-ui-ac",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
   "dependencies": {
     "classnames": "^2.2.6",
