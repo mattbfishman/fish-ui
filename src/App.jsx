@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 // import Card from './Components/Card/Card';
 // import {Fish} from '@styled-icons/fa-solid/Fish';
 // import SearchField from './Components/Form/Search/SearchField';
-import FilterField from './Components/Form/Filter/FilterField';
-
+import Navbar from './Components/Navbar/Navbar';
+import logo from './logo.png';
 
 // @styled-icons/fa-solid/Fish
 class App extends Component {
@@ -13,10 +13,10 @@ class App extends Component {
     //     console.log(e.target.value);
     //     // console.log("TEST");
     // }
-    test(event){
-        console.log(event.target.checked);
-        debugger;
-    }
+    // test(event){
+    //     console.log(event.target.checked);
+    //     debugger;
+    // }
     render(){
         // var rowData = [
         //     ["Dab","300","Fish"  ],
@@ -27,11 +27,11 @@ class App extends Component {
         //     ["Horse Mackerel","150","Fish"  ],
         //     ["Bitterling","900","Fish"  ],
         //     ["Loach","400","Fish"  ]];
-        var checkboxes = [
-            {label: "Fish", name: "fish"},
-            {label: "Insect", name:"insect"},
-            {label: "Misc", name:"misc"}
-        ]
+        // var checkboxes = [
+        //     {label: "Fish", name: "fish"},
+        //     {label: "Insect", name:"insect"},
+        //     {label: "Misc", name:"misc"}
+        // ]
         return( 
             <div>
                 {/* <Button size={'sm'}/>
@@ -44,7 +44,8 @@ class App extends Component {
                 {/* <Table rows={rowData}/> */}
             {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
             {/* <SearchField filter={this.filter} placeholder={"Search for a price"}/> */}
-            <FilterField checkboxes={checkboxes} changeFilter={this.test}/>
+            {/* <FilterField checkboxes={checkboxes} changeFilter={this.test}/> */}
+            <Navbar logo={logo} navItems={["Home", "About", "Store"]}/>
             </div>
         );
     }
