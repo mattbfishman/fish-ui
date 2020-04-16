@@ -19,11 +19,17 @@
     list-style: none;
     display: inline-flex;
     margin: 0;
-    li{
+    li a{
         width:100px;
         height: 60px;
         line-height: 60px;
         text-align: center;
+        color: #A6C36F !important;
+        text-decoration: none;
+        display: block;
         cursor: pointer;
+        &:hover{
+            color: #BEEF9E !important;
+        }
     }
 }

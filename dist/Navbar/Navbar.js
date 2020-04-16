@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import map from 'lodash/map';
+import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import './Navbar.scss';
 
 class Navbar extends Component {
@@ -8,11 +10,13 @@ class Navbar extends Component {
         props = me && me.props,
         logo = props && props.logo,
         navItems = props && props.navItems,
-        navItemsEle = map(navItems, function (navItem) {
+        navItemsEle = map(navItems, function (navItem, idx) {
       return (
         /*#__PURE__*/
         React.createElement(Navitem, {
-          link: navItem
+          key: idx,
+          path: navItem.path,
+          label: navItem.label
         })
       );
     });
@@ -37,18 +41,37 @@ class Navbar extends Component {
 }
 
 ;
+Navbar.propTypes = {
+  navItems: PropTypes.array
+};
+Navbar.defaultProps = {
+  navItems: []
+};
 
 class Navitem extends Component {
   render() {
     var me = this,
         props = me && me.props,
-        link = props && props.link;
+        label = props && props.label,
+        path = props && props.path;
     return (
       /*#__PURE__*/
-      React.createElement("li", null, link)
+      React.createElement("li", null,
+      /*#__PURE__*/
+      React.createElement(Link, {
+        to: path
+      }, label))
     );
   }
 
 }
 
+Navitem.propTypes = {
+  label: PropTypes.string,
+  path: PropTypes.string
+};
+Navitem.defaultProps = {
+  label: '',
+  path: ''
+};
 export default Navbar;

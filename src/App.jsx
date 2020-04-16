@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 // import SearchField from './Components/Form/Search/SearchField';
 import Navbar from './Components/Navbar/Navbar';
 import logo from './logo.png';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
 
 // @styled-icons/fa-solid/Fish
 class App extends Component {
@@ -32,21 +34,28 @@ class App extends Component {
         //     {label: "Insect", name:"insect"},
         //     {label: "Misc", name:"misc"}
         // ]
+
+        var navItems = [
+            {path: "/", label: "Home"},
+            {path: "/add", label:"Add"}
+        ]
         return( 
-            <div>
-                {/* <Button size={'sm'}/>
-                <Button size={'md'}/>
-                <Button size={'lg'}/>
-                <Button size={'xl'}/>
-                <TextField label={"Test Label"} size={'lg'}/>
-                <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
-                {/* <Login/> */}
-                {/* <Table rows={rowData}/> */}
-            {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
-            {/* <SearchField filter={this.filter} placeholder={"Search for a price"}/> */}
-            {/* <FilterField checkboxes={checkboxes} changeFilter={this.test}/> */}
-            <Navbar logo={logo} navItems={["Home", "About", "Store"]}/>
-            </div>
+            <Router>
+                <div>
+                    {/* <Button size={'sm'}/>
+                    <Button size={'md'}/>
+                    <Button size={'lg'}/>
+                    <Button size={'xl'}/>
+                    <TextField label={"Test Label"} size={'lg'}/>
+                    <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
+                    {/* <Login/> */}
+                    {/* <Table rows={rowData}/> */}
+                {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
+                {/* <SearchField filter={this.filter} placeholder={"Search for a price"}/> */}
+                {/* <FilterField checkboxes={checkboxes} changeFilter={this.test}/> */}
+                    <Navbar logo={logo} navItems={navItems}/>
+                </div>
+            </Router>
         );
     }
 }
