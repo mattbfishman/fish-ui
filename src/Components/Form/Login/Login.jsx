@@ -10,7 +10,7 @@ const Login = () => {
             <div className="break"></div>
             <TextField label={"Password"} size={'lg'}/>
             <div className="break"></div>
-            <Button size={'md'} text={"Login"}/>
+            <Button size={'md'} label={"Login"}/>
         </div>
     );
     

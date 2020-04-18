@@ -25,7 +25,7 @@ class TextField extends Component {
             )
         }
         return(
-            <div>
+            <div className="textinput-div">
                 {labelEle}
                 <input className={inputClass} placeholder={placeholder}/>
             </div>

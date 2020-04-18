@@ -29,7 +29,9 @@ class TextField extends Component {
 
     return (
       /*#__PURE__*/
-      React.createElement("div", null, labelEle,
+      React.createElement("div", {
+        className: "textinput-div"
+      }, labelEle,
       /*#__PURE__*/
       React.createElement("input", {
         className: inputClass,

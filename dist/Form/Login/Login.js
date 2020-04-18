@@ -30,7 +30,7 @@ const Login = () => {
     /*#__PURE__*/
     React.createElement(Button, {
       size: 'md',
-      text: "Login"
+      label: "Login"
     }))
   );
 };

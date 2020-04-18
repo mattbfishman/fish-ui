@@ -8,7 +8,7 @@ class Button extends Component {
         var me      = this,
             props   = me && me.props,
             size    = props && props.size,
-            text    = props && props.text,
+            label   = props && props.label,
             btnClass = classNames({
                 'btn'       : true,
                 'btn-sm'    : size === 'sm', 
@@ -19,7 +19,7 @@ class Button extends Component {
 
         return(
             <button className={btnClass}>
-                <span>{text}</span>
+                <span>{label}</span>
             </button>
         );
     }
@@ -28,7 +28,7 @@ class Button extends Component {
 
 Button.propTypes = {
     size: PropTypes.string,
-    text: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired
 }
 
 Button.defaultProps = {

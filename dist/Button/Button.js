@@ -9,7 +9,7 @@ class Button extends Component {
     var me = this,
         props = me && me.props,
         size = props && props.size,
-        text = props && props.text,
+        label = props && props.label,
         btnClass = classNames({
       'btn': true,
       'btn-sm': size === 'sm',
@@ -23,7 +23,7 @@ class Button extends Component {
         className: btnClass
       },
       /*#__PURE__*/
-      React.createElement("span", null, text))
+      React.createElement("span", null, label))
     );
   }
 
@@ -31,7 +31,7 @@ class Button extends Component {
 
 Button.propTypes = {
   size: PropTypes.string,
-  text: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired
 };
 Button.defaultProps = {
   size: 'md'
