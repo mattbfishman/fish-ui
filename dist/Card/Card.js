@@ -10,22 +10,13 @@ class Card extends Component {
         typeLogo = props && props.typeLogo,
         type = props && props.type,
         price = props && props.price;
-    return (
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: "card-container " + type
-      },
-      /*#__PURE__*/
-      React.createElement("h1", {
-        className: "card-title"
-      }, title),
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: "card-type"
-      }, typeLogo),
-      /*#__PURE__*/
-      React.createElement("h2", null, price))
-    );
+    return /*#__PURE__*/React.createElement("div", {
+      className: "card-container " + type
+    }, /*#__PURE__*/React.createElement("h1", {
+      className: "card-title"
+    }, title), /*#__PURE__*/React.createElement("div", {
+      className: "card-type"
+    }, typeLogo), /*#__PURE__*/React.createElement("h2", null, price));
   }
 
 }

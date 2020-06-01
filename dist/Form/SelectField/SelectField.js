@@ -10,16 +10,15 @@ class SelectField extends Component {
     var me = this,
         props = me && me.props,
         options = props && props.options,
-        label = props && props.label,
-        size = props && props.size,
+        label = props.label,
+        size = props.size,
+        id = props.id,
+        update = props.update,
         optionsEle = map(options, function (option, index) {
-      return (
-        /*#__PURE__*/
-        React.createElement("option", {
-          key: index,
-          value: option.value
-        }, option.label)
-      );
+      return /*#__PURE__*/React.createElement("option", {
+        key: index,
+        value: option.value
+      }, option.label);
     }),
         inputClass = classNames({
       'select-input sm': size === 'sm',
@@ -27,20 +26,15 @@ class SelectField extends Component {
       'select-input lg': size === 'lg',
       'select-input xl': size === 'xl'
     });
-    return (
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: "selectinput-div"
-      },
-      /*#__PURE__*/
-      React.createElement("label", {
-        className: "text-input-label"
-      }, label, ":"),
-      /*#__PURE__*/
-      React.createElement("select", {
-        className: inputClass
-      }, optionsEle))
-    );
+    return /*#__PURE__*/React.createElement("div", {
+      className: "selectinput-div"
+    }, /*#__PURE__*/React.createElement("label", {
+      className: "text-input-label"
+    }, label, ":"), /*#__PURE__*/React.createElement("select", {
+      className: inputClass,
+      id: id,
+      onChange: update
+    }, optionsEle));
   }
 
 }
@@ -48,11 +42,14 @@ class SelectField extends Component {
 SelectField.propTypes = {
   options: PropTypes.array,
   label: PropTypes.string,
-  size: PropTypes.string
+  size: PropTypes.string,
+  id: PropTypes.string
 };
 SelectField.defaultProps = {
   options: [],
   label: '',
-  size: 'md'
+  size: 'md',
+  update: () => null,
+  id: ''
 };
 export default SelectField;

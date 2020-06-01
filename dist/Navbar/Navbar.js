@@ -11,31 +11,21 @@ class Navbar extends Component {
         logo = props && props.logo,
         navItems = props && props.navItems,
         navItemsEle = map(navItems, function (navItem, idx) {
-      return (
-        /*#__PURE__*/
-        React.createElement(Navitem, {
-          key: idx,
-          path: navItem.path,
-          label: navItem.label
-        })
-      );
+      return /*#__PURE__*/React.createElement(Navitem, {
+        key: idx,
+        path: navItem.path,
+        label: navItem.label
+      });
     });
-    return (
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: "navbar"
-      },
-      /*#__PURE__*/
-      React.createElement("img", {
-        className: "logo",
-        src: logo,
-        alt: "Nav icon"
-      }),
-      /*#__PURE__*/
-      React.createElement("ul", {
-        className: "nav-items"
-      }, navItemsEle))
-    );
+    return /*#__PURE__*/React.createElement("div", {
+      className: "navbar"
+    }, /*#__PURE__*/React.createElement("img", {
+      className: "logo",
+      src: logo,
+      alt: "Nav icon"
+    }), /*#__PURE__*/React.createElement("ul", {
+      className: "nav-items"
+    }, navItemsEle));
   }
 
 }
@@ -54,14 +44,9 @@ class Navitem extends Component {
         props = me && me.props,
         label = props && props.label,
         path = props && props.path;
-    return (
-      /*#__PURE__*/
-      React.createElement("li", null,
-      /*#__PURE__*/
-      React.createElement(Link, {
-        to: path
-      }, label))
-    );
+    return /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+      to: path
+    }, label));
   }
 
 }

@@ -11,30 +11,19 @@ class Table extends Component {
         props = me && me.props,
         rows = props && props.rows,
         createRow = this.createTableRows;
-    return (
-      /*#__PURE__*/
-      React.createElement("table", null,
-      /*#__PURE__*/
-      React.createElement("tbody", null, map(rows, function (value, index) {
-        return createRow(value, index);
-      })))
-    );
+    return /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("tbody", null, map(rows, function (value, index) {
+      return createRow(value, index);
+    })));
   }
 
   createTableRows(rowData, rowKey) {
-    return (
-      /*#__PURE__*/
-      React.createElement("tr", {
-        key: rowKey
-      }, rowData.map((key, index) => {
-        return (
-          /*#__PURE__*/
-          React.createElement("td", {
-            key: index
-          }, key)
-        );
-      }))
-    );
+    return /*#__PURE__*/React.createElement("tr", {
+      key: rowKey
+    }, rowData.map((key, index) => {
+      return /*#__PURE__*/React.createElement("td", {
+        key: index
+      }, key);
+    }));
   }
 
 }

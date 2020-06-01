@@ -8,19 +8,12 @@ class Checkbox extends Component {
         props = me && me.props,
         label = props && props.label,
         name = props && props.name;
-    return (
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: "checkbox-container"
-      },
-      /*#__PURE__*/
-      React.createElement("input", {
-        name: name,
-        type: "checkbox"
-      }),
-      /*#__PURE__*/
-      React.createElement("label", null, label))
-    );
+    return /*#__PURE__*/React.createElement("div", {
+      className: "checkbox-container"
+    }, /*#__PURE__*/React.createElement("input", {
+      name: name,
+      type: "checkbox"
+    }), /*#__PURE__*/React.createElement("label", null, label));
   }
 
 }

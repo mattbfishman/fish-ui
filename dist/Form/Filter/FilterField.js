@@ -38,33 +38,23 @@ class FilterField extends Component {
       'hidden': show === false
     }),
         checkboxEle = map(checkboxes, function (checkbox, index) {
-      return (
-        /*#__PURE__*/
-        React.createElement(Checkbox, {
-          key: index,
-          name: checkbox.name,
-          label: checkbox.label
-        })
-      );
+      return /*#__PURE__*/React.createElement(Checkbox, {
+        key: index,
+        name: checkbox.name,
+        label: checkbox.label
+      });
     });
-    return (
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: "filter-container"
-      },
-      /*#__PURE__*/
-      React.createElement(FilterList, {
-        onClick: toggleHidden,
-        className: "filter-icon"
-      }),
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: filterDisplay,
-        onChange: e => {
-          changeFilter(e);
-        }
-      }, checkboxEle))
-    );
+    return /*#__PURE__*/React.createElement("div", {
+      className: "filter-container"
+    }, /*#__PURE__*/React.createElement(FilterList, {
+      onClick: toggleHidden,
+      className: "filter-icon"
+    }), /*#__PURE__*/React.createElement("div", {
+      className: filterDisplay,
+      onChange: e => {
+        changeFilter(e);
+      }
+    }, checkboxEle));
   }
 
 }

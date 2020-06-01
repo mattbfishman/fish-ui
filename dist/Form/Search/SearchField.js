@@ -11,22 +11,15 @@ class SearchField extends Component {
         props = me && me.props,
         filter = props && props.filter,
         placeholder = props && props.placeholder;
-    return (
-      /*#__PURE__*/
-      React.createElement("div", {
-        className: "search-container"
-      },
-      /*#__PURE__*/
-      React.createElement("input", {
-        onKeyUp: e => filter(e),
-        placeholder: placeholder,
-        className: "search-field"
-      }),
-      /*#__PURE__*/
-      React.createElement(Search, {
-        className: "search-icon"
-      }))
-    );
+    return /*#__PURE__*/React.createElement("div", {
+      className: "search-container"
+    }, /*#__PURE__*/React.createElement("input", {
+      onKeyUp: e => filter(e),
+      placeholder: placeholder,
+      className: "search-field"
+    }), /*#__PURE__*/React.createElement(Search, {
+      className: "search-icon"
+    }));
   }
 
 }

@@ -7,8 +7,9 @@ class Button extends Component {
     render(){
         var me      = this,
             props   = me && me.props,
-            size    = props && props.size,
-            label   = props && props.label,
+            size    = props.size,
+            label   = props.label,
+            onClick = props.onClick,
             btnClass = classNames({
                 'btn'       : true,
                 'btn-sm'    : size === 'sm', 
@@ -18,7 +19,7 @@ class Button extends Component {
             });
 
         return(
-            <button className={btnClass}>
+            <button className={btnClass} onClick={onClick}>
                 <span>{label}</span>
             </button>
         );
@@ -28,11 +29,14 @@ class Button extends Component {
 
 Button.propTypes = {
     size: PropTypes.string,
-    label: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func
 }
 
 Button.defaultProps = {
-    size: 'md'
+    label: '',
+    size: 'md',
+    onClick: () => null
 }
 
 export default Button;

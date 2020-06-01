@@ -9,8 +9,10 @@ class SelectField extends Component {
         var me          = this,
             props       = me && me.props,
             options     = props && props.options,
-            label       = props && props.label,
-            size        = props && props.size,
+            label       = props.label,
+            size        = props.size,
+            id          = props.id,
+            update      = props.update,
             optionsEle  = map(options, function(option, index){
                 return <option key={index} value={option.value}>{option.label}</option>;
             }),
@@ -24,7 +26,7 @@ class SelectField extends Component {
         return(
             <div className="selectinput-div">
                 <label className="text-input-label">{label}:</label>
-                <select className={inputClass}>
+                <select className={inputClass} id={id} onChange={update}>
                     {optionsEle}
                 </select>
             </div>
@@ -36,13 +38,17 @@ class SelectField extends Component {
 SelectField.propTypes = {
     options: PropTypes.array,
     label  : PropTypes.string,
-    size: PropTypes.string
+    size   : PropTypes.string,
+    id     : PropTypes.string
 }
 
 SelectField.defaultProps = {
     options: [],
-    label  : '',
-    size: 'md'
+    label: '',
+    size: 'md',
+    update: () => null,
+    id : ''
+
 }
 
 export default SelectField;

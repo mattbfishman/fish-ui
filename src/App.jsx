@@ -16,10 +16,11 @@ class App extends Component {
     //     console.log(e.target.value);
     //     // console.log("TEST");
     // }
-    // test(event){
-    //     console.log(event.target.checked);
-    //     debugger;
-    // }
+    test(event){
+        // console.log(document.getElementById("addForm"));
+        console.log("HERE");
+        event.preventDefault();
+    }
     render(){
         // <TextField label={"Item Name"} size={'lg'}/>
         //         <TextField label={"Price"} size={'lg'}/>
@@ -29,13 +30,13 @@ class App extends Component {
         var options = [
             {label:"Bug", value:"bug"},
             {label:"Fish", value:"fish"},
-            {label:"Misc", value:"Misc"}
+            {label:"Misc", value:"misc"}
         ],
         header = "Add Item", 
         fields = [
-            {type:"text", label:"Item Name", size:"lg"},
-            {type:"text", label:"Price", size:"lg"},
-            {type:"select", label:"Type", size:"md", options: options},
+            {type:"text", label:"Item Name", size:"lg", id:"name"},
+            {type:"text", label:"Price", size:"lg", id:"price"},
+            {type:"select", label:"Type", size:"md", options: options, id:"type"},
             {type:"button", label:"Add", size:"md"}
         ];
         // var rowData = [
@@ -67,7 +68,7 @@ class App extends Component {
                     <TextField label={"Test Label"} size={'lg'}/>
                     <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
                     {/* <Login/> */}
-                    <AddForm header={header} fields={fields}/>
+                    <AddForm header={header} fields={fields} submit={this.test}/>
                     {/* <Table rows={rowData}/> */}
                 {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}
                 {/* <SearchField filter={this.filter} placeholder={"Search for a price"}/> */}
