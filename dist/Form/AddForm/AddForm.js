@@ -12,6 +12,7 @@ class AddForm extends Component {
     super(props);
     this.updateForm = this.updateForm.bind(this);
     this.initDefaultStates = this.initDefaultStates.bind(this);
+    this.submitForm = this.submitForm.bind(this);
     this.state = {
       form: {}
     };
@@ -76,13 +77,22 @@ class AddForm extends Component {
     me.initDefaultStates();
   }
 
+  submitForm(e) {
+    var me = this,
+        props = me.props,
+        state = me.state,
+        form = state && { ...state.form
+    },
+        submit = props.submit;
+    submit(e, form);
+  }
+
   render() {
     var me = this,
         props = me && me.props,
         updateForm = me.updateForm,
         header = props && props.header,
         fields = props && props.fields,
-        submit = props && props.submit,
         fieldEles = map(fields, function (field, index) {
       let type = field.type,
           label = field.label,
@@ -117,7 +127,7 @@ class AddForm extends Component {
       }
     });
     return /*#__PURE__*/React.createElement("form", {
-      onSubmit: submit
+      onSubmit: me.submitForm
     }, /*#__PURE__*/React.createElement("div", {
       className: "add-form"
     }, /*#__PURE__*/React.createElement("div", {

@@ -16,10 +16,10 @@ class App extends Component {
     //     console.log(e.target.value);
     //     // console.log("TEST");
     // }
-    test(event){
+    test(e, form){
         // console.log(document.getElementById("addForm"));
-        console.log("HERE");
-        event.preventDefault();
+        console.log(form);
+        e.preventDefault();
     }
     render(){
         // <TextField label={"Item Name"} size={'lg'}/>
