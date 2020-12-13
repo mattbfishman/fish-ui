@@ -6,8 +6,8 @@ import React, {Component} from 'react';
 // import SearchField from './Components/Form/Search/SearchField';
 // import Navbar from './Components/Navbar/Navbar';
 // import logo from './logo.png';
-import TextField from './Components/Form/Text';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import TextField from './Components/Form/TextField/TextField';
+// import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 
 // @styled-icons/fa-solid/Fish
@@ -69,7 +69,7 @@ class App extends Component {
                     <TextField label={"Test Label"} size={'lg'}/>
                     <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
                     {/* <Login/> */}
-                    <TextField label={"Test Label"} size={'lg'} placeholder={"Testing placeholder"}/>
+                    <TextField size={'md'} placeholder={"Testing placeholder"}/>
                     {/* <AddForm header={header} fields={fields} submit={this.test}/> */}
                     {/* <Table rows={rowData}/> */}
                 {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}

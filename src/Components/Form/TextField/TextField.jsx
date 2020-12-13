@@ -1,55 +1,35 @@
-import React, {Component} from 'react';
+import React from 'react';
+import styled from 'styled-components';
+import * as Styles from './TextFieldStyles';
 import PropTypes from 'prop-types';
-import './TextField.scss';
-var classNames = require('classnames');
 
-class TextField extends Component {
-    render(){
+const Text = styled.input`
+    ${Styles.inputBase};
+    ${props => Styles[props.size]};
+`
+
+export default class TextField extends React.Component {  
+    render() {
         var me          = this,
-            props       = me && me.props,
-            label       = props.label,
-            placeholder = props.placeholder,
+            props       = (me && me.props) || {},
             size        = props.size,
-            update      = props.update,
-            id          = props.id,
-            labelEle,
-            inputClass = classNames({
-                'text-input sm'    : size === 'sm', 
-                'text-input md'   :  size === 'md',
-                'text-input lg'    : size === 'lg',
-                'text-input xl'    : size === 'xl',
+            placeholder = props.placeholder,
+            update      = props.update;
 
-            });
-
-        if(label){
-            labelEle = (
-                <label className="text-input-label">{label}:</label>
-            )
-        }
-        return(
-            <div className="textinput-div">
-                {labelEle}
-                <input className={inputClass} placeholder={placeholder} onChange={update} id={id}/>
-            </div>
+        return (
+            <Text placeholder={placeholder} size={size} onChange={update} />
         );
     }
-    
-}
+};
 
 TextField.propTypes = {
-    label: PropTypes.string,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
     placeholder: PropTypes.string,
-    id: PropTypes.string,
     update: PropTypes.func
 }
 
 TextField.defaultProps = {
-    label: '',
     placeholder: '',
     size: 'md',
-    id: '',
     update: () => null
 }
-
-export default TextField;
