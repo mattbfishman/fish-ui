@@ -5996,13 +5996,15 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js").default;
+var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/12548b4ee5da0126d6bf01361d9dc49a.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/12548b4ee5da0126d6bf01361d9dc49a.js").default;
 
-var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js").default;
+var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js").default;
 
-var scope_2 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+var scope_2 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js").default;
 
-var __DOCZ_DUMMY_EXPORT_DEFAULT = Object.assign({}, scope_0, scope_1, scope_2);
+var scope_3 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+
+var __DOCZ_DUMMY_EXPORT_DEFAULT = Object.assign({}, scope_0, scope_1, scope_2, scope_3);
 
 /* harmony default export */ __webpack_exports__["default"] = (__DOCZ_DUMMY_EXPORT_DEFAULT);
 
@@ -38678,7 +38680,7 @@ var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].but
 }, function (props) {
   return props.color;
 }, function (props) {
-  return props.color;
+  return props.color === 'white' ? 'lightgray' : props.color;
 });
 
 var Button = /*#__PURE__*/function (_React$Component) {
@@ -38925,6 +38927,180 @@ if (typeof xl !== 'undefined' && xl && xl === Object(xl) && Object.isExtensible(
 
 /***/ }),
 
+/***/ "../src/Components/Form/Login/Login.jsx":
+/*!**********************************************!*\
+  !*** ../src/Components/Form/Login/Login.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Login; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _LoginStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LoginStyles */ "../src/Components/Form/Login/LoginStyles.js");
+/* harmony import */ var _TextField_TextField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../TextField/TextField */ "../src/Components/Form/TextField/TextField.jsx");
+/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Button/Button */ "../src/Components/Button/Button.jsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    margin-top: 10px;\n    flex: 0 1 80%;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    margin: 10px auto 10px auto;\n    flex: 0 1 80%;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    ", ";\n    div{\n        justify-content: center;\n        align-content: center;\n        flex-wrap: wrap;\n        width: 100%;\n        height: 100%;\n        display: flex;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+ // import PropTypes from 'prop-types';
+
+
+var StyledLogin = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject(), _LoginStyles__WEBPACK_IMPORTED_MODULE_4__["loginBase"]);
+var LoginInput = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(_TextField_TextField__WEBPACK_IMPORTED_MODULE_5__["default"])(_templateObject2());
+var LoginButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(_Button_Button__WEBPACK_IMPORTED_MODULE_6__["default"])(_templateObject3());
+
+var Login = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(Login, _React$Component);
+
+  function Login() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Login.prototype;
+
+  _proto.render = function render() {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledLogin, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginInput, {
+      placeholder: "Username",
+      size: 'md',
+      type: "text"
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginInput, {
+      placeholder: "Password",
+      size: 'md',
+      type: "password"
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginButton, {
+      size: 'md',
+      label: "Login",
+      color: "lightgreen"
+    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginButton, {
+      size: 'md',
+      label: "Create Account",
+      color: "cornflowerblue"
+    })));
+  };
+
+  return Login;
+}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+
+
+
+if (typeof Login !== 'undefined' && Login && Login === Object(Login) && Object.isExtensible(Login) && !Login.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Login, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Login",
+      filename: "src/Components/Form/Login/Login.jsx"
+    }
+  });
+}
+
+if (typeof Login !== 'undefined' && Login && Login === Object(Login) && Object.isExtensible(Login) && !Login.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Login, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Login",
+      filename: "src/Components/Form/Login/Login.jsx"
+    }
+  });
+}
+
+;
+Login.propTypes = {};
+Login.defaultProps = {};
+
+/***/ }),
+
+/***/ "../src/Components/Form/Login/LoginStyles.js":
+/*!***************************************************!*\
+  !*** ../src/Components/Form/Login/LoginStyles.js ***!
+  \***************************************************/
+/*! exports provided: loginBase */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginBase", function() { return loginBase; });
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    border: 2px solid lightgray;\n    border-radius: 5px;\n    height: 300px;\n    width: 500px;\n    align-self: center;\n    margin: auto;\n    display: flex;\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+/* styles common to all buttons */
+
+var loginBase = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject());
+
+if (typeof loginBase !== 'undefined' && loginBase && loginBase === Object(loginBase) && Object.isExtensible(loginBase) && !loginBase.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(loginBase, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "loginBase",
+      filename: "src/Components/Form/Login/LoginStyles.js"
+    }
+  });
+}
+
+if (typeof loginBase !== 'undefined' && loginBase && loginBase === Object(loginBase) && Object.isExtensible(loginBase) && !loginBase.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(loginBase, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "loginBase",
+      filename: "src/Components/Form/Login/LoginStyles.js"
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "../src/Components/Form/TextField/TextField.jsx":
 /*!******************************************************!*\
   !*** ../src/Components/Form/TextField/TextField.jsx ***!
@@ -38962,7 +39138,11 @@ function _templateObject() {
 
 
 
-var Text = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].input(_templateObject(), _TextFieldStyles__WEBPACK_IMPORTED_MODULE_4__["inputBase"], function (props) {
+var Text = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].input.attrs(function (props) {
+  return {
+    type: props.type
+  };
+})(_templateObject(), _TextFieldStyles__WEBPACK_IMPORTED_MODULE_4__["inputBase"], function (props) {
   return _TextFieldStyles__WEBPACK_IMPORTED_MODULE_4__[props.size];
 });
 
@@ -38977,15 +39157,8 @@ var TextField = /*#__PURE__*/function (_React$Component) {
 
   _proto.render = function render() {
     var me = this,
-        props = me && me.props || {},
-        size = props.size,
-        placeholder = props.placeholder,
-        update = props.update;
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(Text, {
-      placeholder: placeholder,
-      size: size,
-      onChange: update
-    });
+        props = me && me.props || {};
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(Text, props);
   };
 
   return TextField;
@@ -39017,14 +39190,16 @@ if (typeof TextField !== 'undefined' && TextField && TextField === Object(TextFi
 TextField.propTypes = {
   size: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOf(['sm', 'md', 'lg', 'xl']),
   placeholder: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  props: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string
 };
 TextField.defaultProps = {
   placeholder: '',
   size: 'md',
   update: function update() {
     return null;
-  }
+  },
+  type: "text"
 };
 
 /***/ }),
@@ -39506,6 +39681,31 @@ exports.wrapPageElement = true;
  */
 
 exports.wrapRootElement = true;
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/12548b4ee5da0126d6bf01361d9dc49a.js":
+/*!********************************************************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/12548b4ee5da0126d6bf01361d9dc49a.js ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var docz__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! docz */ "../node_modules/docz/dist/index.esm.js");
+/* harmony import */ var _src_Components_Form_Login_Login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/Components/Form/Login/Login */ "../src/Components/Form/Login/Login.jsx");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  Playground: docz__WEBPACK_IMPORTED_MODULE_0__["Playground"],
+  Props: docz__WEBPACK_IMPORTED_MODULE_0__["Props"],
+  Login: _src_Components_Form_Login_Login__WEBPACK_IMPORTED_MODULE_1__["default"],
+  React: react__WEBPACK_IMPORTED_MODULE_2__
+});
 
 /***/ }),
 

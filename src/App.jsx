@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-// import Login from './Components/Form/Login/Login';
+import Login from './Components/Form/Login/Login';
 // import AddForm from './Components/Form/AddForm/AddForm';
 // import Card from './Components/Card/Card';
 // import {Fish} from '@styled-icons/fa-solid/Fish';
 // import SearchField from './Components/Form/Search/SearchField';
 // import Navbar from './Components/Navbar/Navbar';
 // import logo from './logo.png';
-import Button from './Components/Button/Button';
-// import TextField from './Components/Form/TextField/TextField';
+// import Button from './Components/Button/Button';
+import SelectField from './Components/Form/SelectField/SelectField';
 // import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 
@@ -29,11 +29,11 @@ class App extends Component {
         //         <SelectField label={"type"} options={options}/>
         //         <Button size={'md'} label={"Add"}/>
 
-        // var options = [
-        //     {label:"Bug", value:"bug"},
-        //     {label:"Fish", value:"fish"},
-        //     {label:"Misc", value:"misc"}
-        // ],
+        var options = [
+            {label:"Bug", value:"bug"},
+            {label:"Fish", value:"fish"},
+            {label:"Misc", value:"misc"}
+        ];
         // header = "Add Item", 
         // fields = [
         //     {type:"text", label:"Item Name", size:"lg", id:"name"},
@@ -60,9 +60,8 @@ class App extends Component {
         //     {path: "/", label: "Home"},
         //     {path: "/add", label:"Add"}
         // ]
-        return( 
+        return <SelectField label={"type"} options={options}/>;
             // <Router>
-                <div>
                     {/* <Button size={'sm'}/>
                     <Button size={'md'}/>
                     <Button size={'lg'}/>
@@ -70,8 +69,7 @@ class App extends Component {
                     <TextField label={"Test Label"} size={'lg'}/>
                     <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
                     
-                    <Button size={'md'} label={"Button"} color={"lightgreen"}/>
-                    {/* <Login/> */}
+                    {/* <Button size={'md'} label={"Button"} color={"lightgreen"}/> */}
                     {/* <TextField size={'md'} placeholder={"Testing placeholder"}/> */}
                     {/* <AddForm header={header} fields={fields} submit={this.test}/> */}
                     {/* <Table rows={rowData}/> */}
@@ -79,9 +77,7 @@ class App extends Component {
                 {/* <SearchField filter={this.filter} placeholder={"Search for a price"}/> */}
                 {/* <FilterField checkboxes={checkboxes} changeFilter={this.test}/> */}
                     {/* <Navbar logo={logo} navItems={navItems}/> */}
-                </div>
             // </Router>
-        );
     }
 }
 

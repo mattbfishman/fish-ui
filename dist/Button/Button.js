@@ -6,7 +6,7 @@ const StyledButton = styled.button`
     ${Styles.buttonBase};
     ${props => Styles[props.size]};
     background: linear-gradient(to left, white 50%, ${props => props.color} 50%) right;
-    border-color: ${props => props.color};
+    border-color: ${props => props.color === 'white' ? 'lightgray' : props.color};
     background-size: 200%;
     transition: .5s ease-out;
 `;

@@ -1,45 +1,43 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import './SelectField.scss';
+import React from 'react';
+import styled from 'styled-components';
+import * as Styles from './SelectFieldStyles';
 import map from 'lodash/map';
-var classNames = require('classnames');
+import PropTypes from 'prop-types';
 
-class SelectField extends Component {
-    render(){
+const StyledSelectField = styled.div`
+    ${Styles.selectFieldBase};
+    select{
+        ${props => Styles[props.size]};
+    }
+`
+
+export default class SelectField extends React.Component {  
+    render() {
         var me          = this,
-            props       = me && me.props,
-            options     = props && props.options,
+            props       = (me && me.props) || {},
             label       = props.label,
-            size        = props.size,
-            id          = props.id,
             update      = props.update,
+            size        = props.size,
+            options     = props.options,
             optionsEle  = map(options, function(option, index){
                 return <option key={index} value={option.value}>{option.label}</option>;
-            }),
-            inputClass = classNames({
-                'select-input sm'    : size === 'sm', 
-                'select-input md'    : size === 'md',
-                'select-input lg'    : size === 'lg',
-                'select-input xl'    : size === 'xl',
             });
-        
-        return(
-            <div className="selectinput-div">
-                <label className="text-input-label">{label}:</label>
-                <select className={inputClass} id={id} onChange={update}>
+
+        return (
+            <StyledSelectField size={size}>
+                <label>{label}:</label>
+                <select onBlur={update}>
                     {optionsEle}
                 </select>
-            </div>
+            </StyledSelectField>
         );
     }
-    
-}
+};
 
 SelectField.propTypes = {
+    size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
     options: PropTypes.array,
     label  : PropTypes.string,
-    size   : PropTypes.string,
-    id     : PropTypes.string
 }
 
 SelectField.defaultProps = {
@@ -47,8 +45,4 @@ SelectField.defaultProps = {
     label: '',
     size: 'md',
     update: () => null,
-    id : ''
-
 }
-
-export default SelectField;

@@ -1,0 +1,42 @@
+---
+name: SelectField
+route: /SelectField
+---
+
+import { Playground, Props } from 'docz';
+import SelectField from '../../../../src/Components/Form/SelectField/SelectField';
+import {options} from './SelectFieldConstants.js';
+
+#  SelectField
+
+## Props
+<Props of={SelectField} />
+
+## Examples
+
+### Small
+
+<Playground>
+  <SelectField label={"type"} options={options} size={"sm"}/>
+</Playground>
+
+### Medium
+
+<Playground>
+  <SelectField label={"type"} options={options} size={"md"}/>
+</Playground>
+
+### Large
+
+<Playground>
+  <SelectField label={"type"} options={options} size={"lg"}/>
+</Playground>
+
+### Extra Large
+
+<Playground>
+  <SelectField label={"type"} options={options} size={"xl"}/>
+</Playground>
+
+
+

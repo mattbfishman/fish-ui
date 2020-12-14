@@ -3,7 +3,7 @@
     "title": "Fish Ui Ac",
     "description": "My awesome app using docz",
     "menu": [],
-    "version": "0.1.17",
+    "version": "0.1.18",
     "repository": null,
     "native": false,
     "themeConfig": {},
@@ -89,6 +89,78 @@
             "slug": "custom-color",
             "depth": 3,
             "value": "Custom Color"
+          }
+        ]
+      }
+    },
+    {
+      "key": "documentation/Components/Form/Login/Login.mdx",
+      "value": {
+        "name": "Login",
+        "route": "/Login",
+        "id": "251f154d73227efe39be7c5c5625eafa",
+        "filepath": "documentation/Components/Form/Login/Login.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\Login\\Login.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-form-login-login",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "textfield",
+            "depth": 1,
+            "value": "TextField"
+          }
+        ]
+      }
+    },
+    {
+      "key": "documentation/Components/Form/SelectField/SelectField.mdx",
+      "value": {
+        "name": "SelectField",
+        "route": "/SelectField",
+        "id": "320d76de1e883f4a171157b14a32ee16",
+        "filepath": "documentation/Components/Form/SelectField/SelectField.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\SelectField\\SelectField.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-form-select-field-select-field",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "selectfield",
+            "depth": 1,
+            "value": "SelectField"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          },
+          {
+            "slug": "small",
+            "depth": 3,
+            "value": "Small"
+          },
+          {
+            "slug": "medium",
+            "depth": 3,
+            "value": "Medium"
+          },
+          {
+            "slug": "large",
+            "depth": 3,
+            "value": "Large"
+          },
+          {
+            "slug": "extra-large",
+            "depth": 3,
+            "value": "Extra Large"
           }
         ]
       }
@@ -565,7 +637,7 @@
       ]
     },
     {
-      "key": "dist/Form/SelectField/SelectField.js",
+      "key": "dist/Form/SelectField/OLD.js",
       "value": [
         {
           "description": "",
@@ -607,6 +679,77 @@
               }
             },
             "id": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "update": {
+              "defaultValue": {
+                "value": "() => null",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "dist/Form/SelectField/SelectField.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SelectField",
+          "methods": [],
+          "actualName": "SelectField",
+          "props": {
+            "size": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'sm'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'md'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'lg'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'xl'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'md'",
+                "computed": false
+              }
+            },
+            "options": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "label": {
               "type": {
                 "name": "string"
               },
@@ -687,6 +830,20 @@
                 "value": "() => null",
                 "computed": false
               }
+            },
+            "props": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "type": {
+              "defaultValue": {
+                "value": "\"text\"",
+                "computed": false
+              },
+              "required": false
             }
           }
         }
@@ -874,6 +1031,30 @@
       ]
     },
     {
+      "key": "src/Components/Navbar/Navbar.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Navbar",
+          "methods": [],
+          "actualName": "Navbar",
+          "props": {
+            "navItems": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/Components/Table/Table.jsx",
       "value": [
         {
@@ -902,30 +1083,6 @@
           "actualName": "Table",
           "props": {
             "rows": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Components/Navbar/Navbar.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Navbar",
-          "methods": [],
-          "actualName": "Navbar",
-          "props": {
-            "navItems": {
               "type": {
                 "name": "array"
               },
@@ -1021,6 +1178,17 @@
       ]
     },
     {
+      "key": "src/Components/Form/Login/Login.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Login",
+          "methods": [],
+          "actualName": "Login"
+        }
+      ]
+    },
+    {
       "key": "src/Components/Form/Filter/FilterField.jsx",
       "value": [
         {
@@ -1060,17 +1228,6 @@
       ]
     },
     {
-      "key": "src/Components/Form/Login/Login.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Login",
-          "methods": [],
-          "actualName": "Login"
-        }
-      ]
-    },
-    {
       "key": "src/Components/Form/Search/SearchField.jsx",
       "value": [
         {
@@ -1095,7 +1252,7 @@
       ]
     },
     {
-      "key": "src/Components/Form/SelectField/SelectField.jsx",
+      "key": "src/Components/Form/SelectField/OLD.jsx",
       "value": [
         {
           "description": "",
@@ -1137,6 +1294,77 @@
               }
             },
             "id": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "update": {
+              "defaultValue": {
+                "value": "() => null",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Components/Form/SelectField/SelectField.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SelectField",
+          "methods": [],
+          "actualName": "SelectField",
+          "props": {
+            "size": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'sm'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'md'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'lg'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'xl'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'md'",
+                "computed": false
+              }
+            },
+            "options": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "label": {
               "type": {
                 "name": "string"
               },
@@ -1217,6 +1445,20 @@
                 "value": "() => null",
                 "computed": false
               }
+            },
+            "props": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "type": {
+              "defaultValue": {
+                "value": "\"text\"",
+                "computed": false
+              },
+              "required": false
             }
           }
         }
