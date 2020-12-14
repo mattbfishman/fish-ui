@@ -6,7 +6,8 @@ import React, {Component} from 'react';
 // import SearchField from './Components/Form/Search/SearchField';
 // import Navbar from './Components/Navbar/Navbar';
 // import logo from './logo.png';
-import TextField from './Components/Form/TextField/TextField';
+import Button from './Components/Button/Button';
+// import TextField from './Components/Form/TextField/TextField';
 // import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 
@@ -65,11 +66,13 @@ class App extends Component {
                     {/* <Button size={'sm'}/>
                     <Button size={'md'}/>
                     <Button size={'lg'}/>
-                    <Button size={'xl'}/>
+                    // <Button size={'xl'}/>
                     <TextField label={"Test Label"} size={'lg'}/>
                     <TextField placeholder={"Testing placeholder"} size={"xl"}/> */}
+                    
+                    <Button size={'md'} label={"Button"} color={"lightgreen"}/>
                     {/* <Login/> */}
-                    <TextField size={'md'} placeholder={"Testing placeholder"}/>
+                    {/* <TextField size={'md'} placeholder={"Testing placeholder"}/> */}
                     {/* <AddForm header={header} fields={fields} submit={this.test}/> */}
                     {/* <Table rows={rowData}/> */}
                 {/* <Card title={"Red Snapper"} typeLogo={<Fish/>} type={"fish"} price={"3000"}/> */}

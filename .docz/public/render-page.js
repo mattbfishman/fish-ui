@@ -5998,7 +5998,7 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js").default;
 
-var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/500ef4324e54a5535812d9f2f38a54f1.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/500ef4324e54a5535812d9f2f38a54f1.js").default;
+var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js").default;
 
 var scope_2 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
 
@@ -38636,6 +38636,295 @@ var ulid = factory();
 
 /***/ }),
 
+/***/ "../src/Components/Button/Button.jsx":
+/*!*******************************************!*\
+  !*** ../src/Components/Button/Button.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Button; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _ButtonStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ButtonStyles */ "../src/Components/Button/ButtonStyles.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    ", ";\n    ", ";\n    background: linear-gradient(to left, white 50%, ", " 50%) right;\n    border-color: ", ";\n    background-size: 200%;\n    transition: .5s ease-out;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject(), _ButtonStyles__WEBPACK_IMPORTED_MODULE_4__["buttonBase"], function (props) {
+  return _ButtonStyles__WEBPACK_IMPORTED_MODULE_4__[props.size];
+}, function (props) {
+  return props.color;
+}, function (props) {
+  return props.color;
+});
+
+var Button = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(Button, _React$Component);
+
+  function Button() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Button.prototype;
+
+  _proto.render = function render() {
+    var me = this,
+        props = me && me.props || {},
+        label = props.label;
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledButton, props, label);
+  };
+
+  return Button;
+}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+
+
+
+if (typeof Button !== 'undefined' && Button && Button === Object(Button) && Object.isExtensible(Button) && !Button.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Button, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Button",
+      filename: "src/Components/Button/Button.jsx"
+    }
+  });
+}
+
+if (typeof Button !== 'undefined' && Button && Button === Object(Button) && Object.isExtensible(Button) && !Button.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Button, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Button",
+      filename: "src/Components/Button/Button.jsx"
+    }
+  });
+}
+
+;
+Button.propTypes = {
+  size: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOf(['sm', 'md', 'lg', 'xl']),
+  onClick: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.func,
+  label: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOf(['default', 'success', 'error', 'danger']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string
+};
+Button.defaultProps = {
+  size: 'md',
+  onClick: function onClick() {
+    return null;
+  },
+  variant: 'default',
+  color: 'white'
+};
+
+/***/ }),
+
+/***/ "../src/Components/Button/ButtonStyles.js":
+/*!************************************************!*\
+  !*** ../src/Components/Button/ButtonStyles.js ***!
+  \************************************************/
+/*! exports provided: buttonBase, sm, md, lg, xl */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buttonBase", function() { return buttonBase; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sm", function() { return sm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "md", function() { return md; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lg", function() { return lg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "xl", function() { return xl; });
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+
+
+function _templateObject5() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 120px;\n    height: 60px;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 100px;\n    height: 50px;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 80px;\n    height: 40px;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 60px;\n    height: 30px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    background: #fff;\n    border-radius: 5px;\n    border: 1px solid lightgray;\n    color: #737373;\n    outline: none;\n    &:hover{\n        color: black;\n        background-position: left;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+/* styles common to all buttons */
+
+var buttonBase = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject());
+/* size variants */
+
+if (typeof buttonBase !== 'undefined' && buttonBase && buttonBase === Object(buttonBase) && Object.isExtensible(buttonBase) && !buttonBase.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(buttonBase, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "buttonBase",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+if (typeof buttonBase !== 'undefined' && buttonBase && buttonBase === Object(buttonBase) && Object.isExtensible(buttonBase) && !buttonBase.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(buttonBase, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "buttonBase",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+var sm = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject2());
+
+if (typeof sm !== 'undefined' && sm && sm === Object(sm) && Object.isExtensible(sm) && !sm.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(sm, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "sm",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+if (typeof sm !== 'undefined' && sm && sm === Object(sm) && Object.isExtensible(sm) && !sm.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(sm, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "sm",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+var md = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject3());
+
+if (typeof md !== 'undefined' && md && md === Object(md) && Object.isExtensible(md) && !md.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(md, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "md",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+if (typeof md !== 'undefined' && md && md === Object(md) && Object.isExtensible(md) && !md.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(md, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "md",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+var lg = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject4());
+
+if (typeof lg !== 'undefined' && lg && lg === Object(lg) && Object.isExtensible(lg) && !lg.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(lg, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "lg",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+if (typeof lg !== 'undefined' && lg && lg === Object(lg) && Object.isExtensible(lg) && !lg.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(lg, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "lg",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+var xl = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(_templateObject5());
+
+if (typeof xl !== 'undefined' && xl && xl === Object(xl) && Object.isExtensible(xl) && !xl.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(xl, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "xl",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+if (typeof xl !== 'undefined' && xl && xl === Object(xl) && Object.isExtensible(xl) && !xl.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(xl, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "xl",
+      filename: "src/Components/Button/ButtonStyles.js"
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "../src/Components/Form/TextField/TextField.jsx":
 /*!******************************************************!*\
   !*** ../src/Components/Form/TextField/TextField.jsx ***!
@@ -39245,23 +39534,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/500ef4324e54a5535812d9f2f38a54f1.js":
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js":
 /*!********************************************************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/500ef4324e54a5535812d9f2f38a54f1.js ***!
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js ***!
   \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_Components_Form_TextField_TextField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/Components/Form/TextField/TextField */ "../src/Components/Form/TextField/TextField.jsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var docz__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! docz */ "../node_modules/docz/dist/index.esm.js");
+/* harmony import */ var _src_Components_Button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/Components/Button/Button */ "../src/Components/Button/Button.jsx");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  TextField: _src_Components_Form_TextField_TextField__WEBPACK_IMPORTED_MODULE_0__["default"],
-  React: react__WEBPACK_IMPORTED_MODULE_1__
+  Playground: docz__WEBPACK_IMPORTED_MODULE_0__["Playground"],
+  Props: docz__WEBPACK_IMPORTED_MODULE_0__["Props"],
+  Button: _src_Components_Button_Button__WEBPACK_IMPORTED_MODULE_1__["default"],
+  React: react__WEBPACK_IMPORTED_MODULE_2__
 });
 
 /***/ }),

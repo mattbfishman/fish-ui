@@ -1,39 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
+import * as Styles from './ButtonStyles';
 import PropTypes from 'prop-types';
-import './Button.scss';
-
-var classNames = require('classnames');
-
-class Button extends Component {
+const StyledButton = styled.button`
+    ${Styles.buttonBase};
+    ${props => Styles[props.size]};
+    background: linear-gradient(to left, white 50%, ${props => props.color} 50%) right;
+    border-color: ${props => props.color};
+    background-size: 200%;
+    transition: .5s ease-out;
+`;
+export default class Button extends React.Component {
   render() {
     var me = this,
-        props = me && me.props,
-        size = props.size,
-        label = props.label,
-        onClick = props.onClick,
-        btnClass = classNames({
-      'btn': true,
-      'btn-sm': size === 'sm',
-      'btn-md': size === 'md',
-      'btn-lg': size === 'lg',
-      'btn-xl': size === 'xl'
-    });
-    return /*#__PURE__*/React.createElement("button", {
-      className: btnClass,
-      onClick: onClick
-    }, /*#__PURE__*/React.createElement("span", null, label));
+        props = me && me.props || {},
+        label = props.label;
+    return /*#__PURE__*/React.createElement(StyledButton, props, label);
   }
 
 }
-
+;
 Button.propTypes = {
-  size: PropTypes.string,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  variant: PropTypes.oneOf(['default', 'success', 'error', 'danger']),
+  color: PropTypes.string
 };
 Button.defaultProps = {
-  label: '',
   size: 'md',
-  onClick: () => null
+  onClick: () => null,
+  variant: 'default',
+  color: 'white'
 };
-export default Button;
