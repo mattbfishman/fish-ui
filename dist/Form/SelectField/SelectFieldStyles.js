@@ -2,7 +2,6 @@ import { css } from 'styled-components';
 /* styles common to all buttons */
 
 export const selectFieldBase = css`
-    margin: 50px;
     label{
         text-transform: capitalize;
         padding-right: 10px;
@@ -25,9 +24,11 @@ export const md = css`
 `;
 export const lg = css`
     min-height: 40px;
-    min-width: 300px
+    min-width: 300px;
+    font-size: 16px;
 `;
 export const xl = css`
-    min-height: 60px;
+    min-height: 40px;
     min-width: 400px;
+    font-size: 16px;
 `;

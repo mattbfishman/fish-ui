@@ -26,7 +26,7 @@ export default class SelectField extends React.Component {
     return /*#__PURE__*/React.createElement(StyledSelectField, {
       size: size
     }, /*#__PURE__*/React.createElement("label", null, label, ":"), /*#__PURE__*/React.createElement("select", {
-      onChange: update
+      onBlur: update
     }, optionsEle));
   }
 

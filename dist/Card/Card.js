@@ -1,34 +1,57 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
+import * as Styles from './CardStyles';
 import PropTypes from 'prop-types';
-import './Card.scss';
-
-class Card extends Component {
+const StyledCard = styled.div`
+    ${Styles.cardBase};
+`;
+const CardImage = styled.img`
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+`;
+const StyledHeader = styled.h2`
+    margin: 0 0 0 20px;
+`;
+const StyledSubHeader = styled.h3`
+    margin: 10px 0 0 20px;
+    font-weight: 100;
+`;
+export default class Card extends React.Component {
   render() {
     var me = this,
-        props = me && me.props,
-        title = props && props.title,
-        typeLogo = props && props.typeLogo,
-        type = props && props.type,
-        price = props && props.price;
-    return /*#__PURE__*/React.createElement("div", {
-      className: "card-container " + type
-    }, /*#__PURE__*/React.createElement("h1", {
-      className: "card-title"
-    }, title), /*#__PURE__*/React.createElement("div", {
-      className: "card-type"
-    }, typeLogo), /*#__PURE__*/React.createElement("h2", null, price));
+        props = me && me.props || {},
+        header = props && props.header,
+        imgSrc = props && props.imgSrc,
+        subHeader = props && props.subHeader,
+        innerContent = props && props.innerContent,
+        img;
+
+    if (imgSrc) {
+      img = /*#__PURE__*/React.createElement(CardImage, {
+        src: imgSrc
+      });
+    }
+
+    return /*#__PURE__*/React.createElement(StyledCard, null, /*#__PURE__*/React.createElement("div", {
+      className: "title"
+    }, img, /*#__PURE__*/React.createElement("div", {
+      className: "header"
+    }, /*#__PURE__*/React.createElement(StyledHeader, null, header), /*#__PURE__*/React.createElement(StyledSubHeader, null, subHeader))), /*#__PURE__*/React.createElement("div", {
+      className: "content"
+    }, /*#__PURE__*/React.createElement("p", null, innerContent)));
   }
 
 }
-
+;
 Card.propTypes = {
-  title: PropTypes.string,
-  price: PropTypes.string,
-  type: PropTypes.string
+  header: PropTypes.string,
+  imgSrc: PropTypes.string,
+  subHeader: PropTypes.string,
+  innerContent: PropTypes.string
 };
 Card.defaultProps = {
-  title: '',
-  price: 'N/A',
-  type: ''
+  header: '',
+  subHeader: '',
+  innerContent: ''
 };
-export default Card;
