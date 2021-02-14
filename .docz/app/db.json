@@ -3,7 +3,7 @@
     "title": "Fish Ui Ac",
     "description": "My awesome app using docz",
     "menu": [],
-    "version": "0.1.18",
+    "version": "0.1.19",
     "repository": null,
     "native": false,
     "themeConfig": {},
@@ -115,6 +115,21 @@
             "slug": "props",
             "depth": 2,
             "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          },
+          {
+            "slug": "success",
+            "depth": 2,
+            "value": "Success"
+          },
+          {
+            "slug": "error",
+            "depth": 2,
+            "value": "Error"
           }
         ]
       }
@@ -261,52 +276,6 @@
       ]
     },
     {
-      "key": "dist/Card/Card.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Card",
-          "methods": [],
-          "actualName": "Card",
-          "props": {
-            "title": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
-                "computed": false
-              }
-            },
-            "price": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'N/A'",
-                "computed": false
-              }
-            },
-            "type": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "dist/Button/Button.js",
       "value": [
         {
@@ -399,6 +368,59 @@
               "description": "",
               "defaultValue": {
                 "value": "'white'",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "dist/Card/Card.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "imgSrc": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "subHeader": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "innerContent": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
                 "computed": false
               }
             }
@@ -657,70 +679,6 @@
                 "value": "''",
                 "computed": false
               }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "dist/Form/SelectField/OLD.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SelectField",
-          "methods": [],
-          "actualName": "SelectField",
-          "props": {
-            "options": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            },
-            "label": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
-                "computed": false
-              }
-            },
-            "size": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'md'",
-                "computed": false
-              }
-            },
-            "id": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
-                "computed": false
-              }
-            },
-            "update": {
-              "defaultValue": {
-                "value": "() => null",
-                "computed": false
-              },
-              "required": false
             }
           }
         }
@@ -1021,6 +979,31 @@
               "description": "",
               "defaultValue": {
                 "value": "''",
+                "computed": false
+              }
+            },
+            "theme": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'default'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'danger'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'default'",
                 "computed": false
               }
             }

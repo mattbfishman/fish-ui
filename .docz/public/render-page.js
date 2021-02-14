@@ -38992,9 +38992,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CardStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CardStyles */ "../src/Components/Card/CardStyles.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+/* harmony import */ var _Constants_theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Constants/theme */ "../src/Constants/theme.js");
+/* harmony import */ var _Constants_theme__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Constants_theme__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
 
 
+
+function _templateObject5() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    display: flex;\n    background: ", ";\n    width: 100%;\n    height: 150px;\n    padding: 0 10px 0 10px;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject4() {
   var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    margin: 10px 0 0 20px;\n    font-weight: 100;\n"]);
@@ -39027,7 +39039,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    ", ";\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    ", ";\n    border-top: 3px solid ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39041,10 +39053,16 @@ function _templateObject() {
 
 
 
-var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject(), _CardStyles__WEBPACK_IMPORTED_MODULE_4__["cardBase"]);
+
+var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject(), _CardStyles__WEBPACK_IMPORTED_MODULE_4__["cardBase"], function (props) {
+  return props.border;
+});
 var CardImage = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img(_templateObject2());
 var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h2(_templateObject3());
 var StyledSubHeader = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h3(_templateObject4());
+var StyledContent = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject5(), function (props) {
+  return props.background;
+});
 
 var Card = /*#__PURE__*/function (_React$Component) {
   Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(Card, _React$Component);
@@ -39062,21 +39080,26 @@ var Card = /*#__PURE__*/function (_React$Component) {
         imgSrc = props && props.imgSrc,
         subHeader = props && props.subHeader,
         innerContent = props && props.innerContent,
+        theme = props && props.theme && _Constants_theme__WEBPACK_IMPORTED_MODULE_6__["themes"][props.theme] || _Constants_theme__WEBPACK_IMPORTED_MODULE_6__["themes"].default,
+        background = theme && theme.background,
+        border = theme && theme.border,
         img;
 
     if (imgSrc) {
-      img = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(CardImage, {
+      img = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(CardImage, {
         src: imgSrc
       });
     }
 
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledCard, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledCard, {
+      border: border
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
       className: "title"
-    }, img, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+    }, img, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
       className: "header"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledHeader, null, header), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledSubHeader, null, subHeader))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
-      className: "content"
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("p", null, innerContent)));
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledHeader, null, header), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledSubHeader, null, subHeader))), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledContent, {
+      background: background
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("p", null, innerContent)));
   };
 
   return Card;
@@ -39109,12 +39132,14 @@ Card.propTypes = {
   header: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
   imgSrc: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
   subHeader: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
-  innerContent: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string
+  innerContent: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  theme: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOf(['default', 'success', 'danger'])
 };
 Card.defaultProps = {
   header: '',
   subHeader: '',
-  innerContent: ''
+  innerContent: '',
+  theme: 'default'
 };
 
 /***/ }),
@@ -39134,7 +39159,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 550px;\n    height: 300px;\n    border-top: 3px solid red;\n    box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n    display: flex;\n    margin: auto;\n    flex-wrap: wrap;\n    background: #ffffffeb;\n\n    .title{\n        display: flex;\n        width: 100%;\n        height: 150px;\n        flex: 1 0 100%;\n        align-items: center;\n        padding-left: 20px;\n    }\n\n    .header{ \n        justify-self: center;\n        display: block;\n        align-self: center\n    }\n\n    .content{\n        display: flex;\n        background: #ffe1e1;\n        width: 100%;\n        height: 150px;\n        padding: 0 20px 0 20px;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 550px;\n    height: 300px;\n    box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n    display: flex;\n    margin: auto;\n    flex-wrap: wrap;\n    background: #ffffffeb;\n\n    .title{\n        display: flex;\n        width: 100%;\n        height: 150px;\n        flex: 1 0 100%;\n        align-items: center;\n        padding-left: 20px;\n    }\n\n    .header{ \n        justify-self: center;\n        display: block;\n        align-self: center\n    }\n\n    .content > p {\n        display: -webkit-box;\n        -webkit-line-clamp: 5;\n        -webkit-box-orient: vertical;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        padding-left: 10px;\n        font-size: 16px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39925,6 +39950,32 @@ if (typeof xl !== 'undefined' && xl && xl === Object(xl) && Object.isExtensible(
     }
   });
 }
+
+/***/ }),
+
+/***/ "../src/Constants/theme.js":
+/*!*********************************!*\
+  !*** ../src/Constants/theme.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  themes: {
+    "error": {
+      "background": "#ffe1e1",
+      "border": "red"
+    },
+    "success": {
+      "background": "#e4ffe8",
+      "border": "#0dde31"
+    },
+    "default": {
+      "background": "#f8f8f8",
+      "border": "#bdbdbd"
+    }
+  }
+};
 
 /***/ }),
 

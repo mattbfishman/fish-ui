@@ -3,7 +3,6 @@ import { css } from 'styled-components';
 export const cardBase = css`
     width: 550px;
     height: 300px;
-    border-top: 3px solid red;
     box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);
     display: flex;
     margin: auto;
@@ -25,15 +24,7 @@ export const cardBase = css`
         align-self: center
     }
 
-    .content{
-        display: flex;
-        background: #ffe1e1;
-        width: 100%;
-        height: 150px;
-        padding: 0 10px 0 10px;
-    }
-
-    .content > p {
+    p {
         display: -webkit-box;
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;

@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import Login from './Components/Form/Login/Login';
 import Card from './Components/Card/Card';
 
-
-
-// @styled-icons/fa-solid/Fish
 class App extends Component {
 
     render(){
