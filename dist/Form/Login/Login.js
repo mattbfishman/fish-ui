@@ -2,17 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import * as Styles from './LoginStyles';
 import TextField from '../TextField/TextField';
-import Button from '../../Button/Button'; // import PropTypes from 'prop-types';
-
+import Button from '../../Button/Button';
 const StyledLogin = styled.div`
     ${Styles.loginBase};
+    flex-wrap: wrap;
     div{
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
         display: flex;
+        flex: 1 0 100%;
+        justify-content: center;
+        flex-wrap: wrap; 
+        align-content: center;
+
+    }
+    .login-form{
+        height: 65%;
+    }
+    .create-form{
+        background: #f8f8f8;
+        height: 35%;
+    }
+    .create-form > h4{
+        margin: 0;
     }
 `;
 const LoginInput = styled(TextField)`
@@ -25,7 +35,9 @@ const LoginButton = styled(Button)`
 `;
 export default class Login extends React.Component {
   render() {
-    return /*#__PURE__*/React.createElement(StyledLogin, null, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(LoginInput, {
+    return /*#__PURE__*/React.createElement(StyledLogin, null, /*#__PURE__*/React.createElement("div", {
+      className: "login-form"
+    }, /*#__PURE__*/React.createElement(LoginInput, {
       placeholder: "Username",
       size: 'md',
       type: "text"
@@ -37,7 +49,9 @@ export default class Login extends React.Component {
       size: 'md',
       label: "Login",
       color: "lightgreen"
-    }), /*#__PURE__*/React.createElement(LoginButton, {
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "create-form"
+    }, /*#__PURE__*/React.createElement("h4", null, "Need An Account?"), /*#__PURE__*/React.createElement(LoginButton, {
       size: 'md',
       label: "Create Account",
       color: "cornflowerblue"
