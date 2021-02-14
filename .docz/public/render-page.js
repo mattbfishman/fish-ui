@@ -96,6 +96,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
+/***/ "../documentation/Components/Footer/footer.scss":
+/*!******************************************************!*\
+  !*** ../documentation/Components/Footer/footer.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "../documentation/Components/Form/SelectField/SelectFieldConstants.js":
 /*!****************************************************************************!*\
   !*** ../documentation/Components/Form/SelectField/SelectFieldConstants.js ***!
@@ -6045,13 +6056,15 @@ var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scop
 
 var scope_2 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/4ae8a546db140c73d6ee8faa7ba9e0e2.js").default;
 
-var scope_3 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9b69b45613e2976bae311b13a9e49491.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9b69b45613e2976bae311b13a9e49491.js").default;
+var scope_3 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/76b6abf62201731e6ba9a6218a52922b.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/76b6abf62201731e6ba9a6218a52922b.js").default;
 
-var scope_4 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js").default;
+var scope_4 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9b69b45613e2976bae311b13a9e49491.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/9b69b45613e2976bae311b13a9e49491.js").default;
 
-var scope_5 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+var scope_5 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js").default;
 
-var __DOCZ_DUMMY_EXPORT_DEFAULT = Object.assign({}, scope_0, scope_1, scope_2, scope_3, scope_4, scope_5);
+var scope_6 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+
+var __DOCZ_DUMMY_EXPORT_DEFAULT = Object.assign({}, scope_0, scope_1, scope_2, scope_3, scope_4, scope_5, scope_6);
 
 /* harmony default export */ __webpack_exports__["default"] = (__DOCZ_DUMMY_EXPORT_DEFAULT);
 
@@ -39076,10 +39089,10 @@ var Card = /*#__PURE__*/function (_React$Component) {
   _proto.render = function render() {
     var me = this,
         props = me && me.props || {},
-        header = props && props.header,
-        imgSrc = props && props.imgSrc,
-        subHeader = props && props.subHeader,
-        innerContent = props && props.innerContent,
+        header = props.header,
+        imgSrc = props.imgSrc,
+        subHeader = props.subHeader,
+        innerContent = props.innerContent,
         theme = props && props.theme && _Constants_theme__WEBPACK_IMPORTED_MODULE_6__["themes"][props.theme] || _Constants_theme__WEBPACK_IMPORTED_MODULE_6__["themes"].default,
         background = theme && theme.background,
         border = theme && theme.border,
@@ -39159,7 +39172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 550px;\n    height: 300px;\n    box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n    display: flex;\n    margin: auto;\n    flex-wrap: wrap;\n    background: #ffffffeb;\n\n    .title{\n        display: flex;\n        width: 100%;\n        height: 150px;\n        flex: 1 0 100%;\n        align-items: center;\n        padding-left: 20px;\n    }\n\n    .header{ \n        justify-self: center;\n        display: block;\n        align-self: center\n    }\n\n    .content > p {\n        display: -webkit-box;\n        -webkit-line-clamp: 5;\n        -webkit-box-orient: vertical;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        padding-left: 10px;\n        font-size: 16px;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 550px;\n    height: 300px;\n    box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n    display: flex;\n    margin: auto;\n    flex-wrap: wrap;\n    background: #ffffffeb;\n\n    .title{\n        display: flex;\n        width: 100%;\n        height: 150px;\n        flex: 1 0 100%;\n        align-items: center;\n        padding-left: 20px;\n    }\n\n    .header{ \n        justify-self: center;\n        display: block;\n        align-self: center\n    }\n\n    p {\n        display: -webkit-box;\n        -webkit-line-clamp: 5;\n        -webkit-box-orient: vertical;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        padding-left: 10px;\n        font-size: 16px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39190,6 +39203,203 @@ if (typeof cardBase !== 'undefined' && cardBase && cardBase === Object(cardBase)
     }
   });
 }
+
+/***/ }),
+
+/***/ "../src/Components/Footer/Footer.jsx":
+/*!*******************************************!*\
+  !*** ../src/Components/Footer/Footer.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash/map */ "lodash/map");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+function _templateObject6() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    text-transform : capitalize;\n    text-decoration: none;\n    color: #898989;\n    margin: 0 0 10px 0;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    width: 80%;\n    flex-direction: row;\n    display: flex;\n    justify-content: flex-start;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    text-transform : capitalize;\n    display: flex;\n    flex-direction: column;\n    padding: 0 50px 0 50px;\n    h2{\n        margin: 0 0 15px 0;\n    }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    flex: 1 0 100%;\n\n    h5{\n        padding-left: 50px;\n    }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    width: 20%;\n    h1{\n        margin: 0 0 20px 0;\n    }\n    p{\n        color: #bdbdbd;\n    }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    display: flex;\n    flex-direction: row;\n    width: 100%;\n    height: 300px;\n    flex-wrap: wrap;\n    background: black;\n    color: #f8f8f8;\n    position: absolute;\n    bottom: 0;\n\n    .info-wrapper{\n        width: 100%;\n        display: flex;\n        padding: 30px 50px 20px 50px;\n        overflow: hidden;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
+var StyledInfo = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2());
+var StyledCopyright = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3());
+var StyledColumn = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject4());
+var StyledColumnWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject5());
+var StyledFooterLink = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a(_templateObject6());
+
+var Footer = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(Footer, _React$Component);
+
+  function Footer() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Footer.prototype;
+
+  _proto.render = function render() {
+    var me = this,
+        props = me && me.props || {},
+        title = props.title,
+        columns = props.columns,
+        copyright = props.copyright,
+        quote = props.quote,
+        columnEles = lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(columns, function (links, key) {
+      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(FooterColumn, {
+        links: links,
+        title: key,
+        key: key
+      });
+    });
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledFooter, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+      className: "info-wrapper"
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledInfo, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("h1", null, title), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("p", null, quote)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledColumnWrapper, null, columnEles)), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledCopyright, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("h5", null, copyright)));
+  };
+
+  return Footer;
+}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+
+
+
+if (typeof Footer !== 'undefined' && Footer && Footer === Object(Footer) && Object.isExtensible(Footer) && !Footer.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Footer, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Footer",
+      filename: "src/Components/Footer/Footer.jsx"
+    }
+  });
+}
+
+if (typeof Footer !== 'undefined' && Footer && Footer === Object(Footer) && Object.isExtensible(Footer) && !Footer.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Footer, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Footer",
+      filename: "src/Components/Footer/Footer.jsx"
+    }
+  });
+}
+
+;
+Footer.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  columns: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  copyright: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+  quote: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string
+};
+Footer.defaultProps = {
+  title: '',
+  quote: '',
+  copyright: '',
+  columns: {}
+};
+
+function FooterColumn(props) {
+  var title = props.title,
+      links = props.links,
+      linkEles = lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(links, function (link, idx) {
+    var href = link.href,
+        label = link.label;
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(FooterLink, {
+      href: href,
+      label: label,
+      key: label
+    });
+  });
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledColumn, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])("h2", null, title), linkEles);
+}
+
+FooterColumn.defaultProps = {
+  title: '',
+  links: []
+};
+
+function FooterLink(props) {
+  var label = props.label,
+      href = props.href;
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledFooterLink, {
+    href: href
+  }, label);
+}
+
+FooterLink.defaultProps = {
+  label: '',
+  href: ''
+};
 
 /***/ }),
 
@@ -39236,7 +39446,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    ", ";\n    div{\n        justify-content: center;\n        align-content: center;\n        flex-wrap: wrap;\n        width: 100%;\n        height: 100%;\n        display: flex;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    ", ";\n    flex-wrap: wrap;\n    div{\n        display: flex;\n        flex: 1 0 100%;\n        justify-content: center;\n        flex-wrap: wrap; \n        align-content: center;\n\n    }\n    .login-form{\n        height: 65%;\n    }\n    .create-form{\n        background: #f8f8f8;\n        height: 35%;\n    }\n    .create-form > h4{\n        margin: 0;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39249,7 +39459,6 @@ function _templateObject() {
 
 
 
- // import PropTypes from 'prop-types';
 
 
 var StyledLogin = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject(), _LoginStyles__WEBPACK_IMPORTED_MODULE_4__["loginBase"]);
@@ -39266,7 +39475,9 @@ var Login = /*#__PURE__*/function (_React$Component) {
   var _proto = Login.prototype;
 
   _proto.render = function render() {
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledLogin, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginInput, {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledLogin, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
+      className: "login-form"
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginInput, {
       placeholder: "Username",
       size: 'md',
       type: "text"
@@ -39278,7 +39489,9 @@ var Login = /*#__PURE__*/function (_React$Component) {
       size: 'md',
       label: "Login",
       color: "lightgreen"
-    }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginButton, {
+    })), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("div", {
+      className: "create-form"
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])("h4", null, "Need An Account?"), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(LoginButton, {
       size: 'md',
       label: "Create Account",
       color: "cornflowerblue"
@@ -39331,7 +39544,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    border: 2px solid lightgray;\n    border-radius: 5px;\n    height: 300px;\n    width: 500px;\n    align-self: center;\n    margin: auto;\n    display: flex;\n\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n    border-radius: 5px;\n    height: 300px;\n    width: 500px;\n    align-self: center;\n    margin: auto;\n    display: flex;\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39979,6 +40192,76 @@ module.exports = {
 
 /***/ }),
 
+/***/ "../src/MockData/footer.js":
+/*!*********************************!*\
+  !*** ../src/MockData/footer.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "footerLinks": {
+    "about": [{
+      "href": "google.com",
+      "label": "home"
+    }, {
+      "href": "google.com",
+      "label": "who are we"
+    }, {
+      "href": "google.com",
+      "label": "what we do"
+    }, {
+      "href": "google.com",
+      "label": "contact us"
+    }],
+    "follow": [{
+      "href": "google.com",
+      "label": "twitter"
+    }, {
+      "href": "google.com",
+      "label": "facebook"
+    }, {
+      "href": "google.com",
+      "label": "instagram"
+    }],
+    "legal": [{
+      "href": "google.com",
+      "label": "privacy"
+    }, {
+      "href": "google.com",
+      "label": "terms"
+    }],
+    "jobs": [{
+      "href": "google.com",
+      "label": "why us"
+    }, {
+      "href": "google.com",
+      "label": "open roles"
+    }],
+    "projects": [{
+      "href": "google.com",
+      "label": "machine works"
+    }, {
+      "href": "google.com",
+      "label": "babble"
+    }, {
+      "href": "google.com",
+      "label": "gallot dreams"
+    }, {
+      "href": "google.com",
+      "label": "splunk"
+    }, {
+      "href": "google.com",
+      "label": "fire portal"
+    }]
+  },
+  "copyright": "© 2020 Fish UI Reserved.",
+  "title": "Fish UI",
+  "quote": "Go out and make great code."
+};
+
+/***/ }),
+
 /***/ "./.cache/api-runner-ssr.js":
 /*!**********************************!*\
   !*** ./.cache/api-runner-ssr.js ***!
@@ -40346,6 +40629,41 @@ __webpack_require__.r(__webpack_exports__);
   Props: docz__WEBPACK_IMPORTED_MODULE_0__["Props"],
   TextField: _src_Components_Form_TextField_TextField__WEBPACK_IMPORTED_MODULE_1__["default"],
   React: react__WEBPACK_IMPORTED_MODULE_2__
+});
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/76b6abf62201731e6ba9a6218a52922b.js":
+/*!********************************************************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/76b6abf62201731e6ba9a6218a52922b.js ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var docz__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! docz */ "../node_modules/docz/dist/index.esm.js");
+/* harmony import */ var _src_Components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/Components/Footer/Footer */ "../src/Components/Footer/Footer.jsx");
+/* harmony import */ var _src_MockData_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/MockData/footer */ "../src/MockData/footer.js");
+/* harmony import */ var _src_MockData_footer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_src_MockData_footer__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _documentation_Components_Footer_footer_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../documentation/Components/Footer/footer.scss */ "../documentation/Components/Footer/footer.scss");
+/* harmony import */ var _documentation_Components_Footer_footer_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_documentation_Components_Footer_footer_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  Playground: docz__WEBPACK_IMPORTED_MODULE_0__["Playground"],
+  Props: docz__WEBPACK_IMPORTED_MODULE_0__["Props"],
+  Footer: _src_Components_Footer_Footer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  footerLinks: _src_MockData_footer__WEBPACK_IMPORTED_MODULE_2__["footerLinks"],
+  title: _src_MockData_footer__WEBPACK_IMPORTED_MODULE_2__["title"],
+  quote: _src_MockData_footer__WEBPACK_IMPORTED_MODULE_2__["quote"],
+  copyright: _src_MockData_footer__WEBPACK_IMPORTED_MODULE_2__["copyright"],
+  React: react__WEBPACK_IMPORTED_MODULE_4__
 });
 
 /***/ }),

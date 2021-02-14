@@ -34,17 +34,14 @@ const StyledContent = styled.div`
 
 export default class Card extends React.Component {  
     render() {
-        var me           = this,
-            props        = (me && me.props) || {},
-            header       = (props && props.header),
-            imgSrc       = (props && props.imgSrc),
-            subHeader    = (props && props.subHeader),
-            innerContent = (props && props.innerContent),
-            theme        = (props && props.theme && themes[props.theme] || themes.default),
-            background   = (theme && theme.background),
-            border       = (theme && theme.border),
+        var me                                        = this,
+            props                                     = (me && me.props) || {},
+            {header, imgSrc, subHeader, innerContent} = props,
+            theme                                     = (props && props.theme && themes[props.theme]) || themes.default,
+            background                                = (theme && theme.background),
+            border                                    = (theme && theme.border),
             img;
-
+        
         if(imgSrc){
             img = <CardImage src={imgSrc}></CardImage>;
         }

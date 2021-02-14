@@ -3,17 +3,27 @@ import styled from 'styled-components';
 import * as Styles from './LoginStyles';
 import TextField from '../TextField/TextField';
 import Button from '../../Button/Button';
-// import PropTypes from 'prop-types';
 
 const StyledLogin = styled.div`
     ${Styles.loginBase};
+    flex-wrap: wrap;
     div{
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
         display: flex;
+        flex: 1 0 100%;
+        justify-content: center;
+        flex-wrap: wrap; 
+        align-content: center;
+
+    }
+    .login-form{
+        height: 65%;
+    }
+    .create-form{
+        background: #f8f8f8;
+        height: 35%;
+    }
+    .create-form > h4{
+        margin: 0;
     }
 `
 
@@ -31,10 +41,13 @@ export default class Login extends React.Component {
     render() {
         return (
             <StyledLogin>
-                <div>
+                <div className="login-form">
                     <LoginInput placeholder={"Username"} size={'md'} type={"text"} />
                     <LoginInput placeholder={"Password"} size={'md'} type={"password"}/>
                     <LoginButton size={'md'} label={"Login"} color={"lightgreen"}/>
+                </div>
+                <div className="create-form">
+                    <h4>Need An Account?</h4> 
                     <LoginButton size={'md'} label={"Create Account"} color={"cornflowerblue"}/>
                 </div>
             </StyledLogin>

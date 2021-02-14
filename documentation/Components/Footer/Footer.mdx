@@ -1,0 +1,21 @@
+---
+name: Footer
+route: /Footer
+---
+
+import { Playground, Props } from 'docz';
+import Footer from '../../../src/Components/Footer/Footer';
+import {footerLinks, title, quote, copyright} from '../../../src/MockData/footer';
+import './footer.scss';
+
+
+#  Footer
+
+## Props
+<Props of={Footer} />
+
+## Examples 
+<Playground>
+    <Footer title={title} quote={quote} columns={footerLinks} copyright={copyright}/>
+</Playground>
+

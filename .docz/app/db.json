@@ -135,6 +135,37 @@
       }
     },
     {
+      "key": "documentation/Components/Footer/Footer.mdx",
+      "value": {
+        "name": "Footer",
+        "route": "/Footer",
+        "id": "01af4f9cb657f9412778cdae1d9874a0",
+        "filepath": "documentation/Components/Footer/Footer.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Footer\\Footer.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-footer-footer",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "footer",
+            "depth": 1,
+            "value": "Footer"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          }
+        ]
+      }
+    },
+    {
       "key": "documentation/Components/Form/Login/Login.mdx",
       "value": {
         "name": "Login",
@@ -1032,6 +1063,63 @@
               }
             },
             "name": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Components/Footer/Footer.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Footer",
+          "methods": [],
+          "actualName": "Footer",
+          "props": {
+            "title": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "columns": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              }
+            },
+            "copyright": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "quote": {
               "type": {
                 "name": "string"
               },
