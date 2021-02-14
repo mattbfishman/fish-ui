@@ -3,75 +3,75 @@ module.exports = {
 
         "about": [
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "home"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "who are we"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "what we do"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "contact us"
             }
         ],
         "follow": [
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "twitter"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "facebook"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "instagram"
             }
         ],
         "legal": [
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "privacy"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "terms"
             }
         ],
         "jobs": [
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "why us"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "open roles"
             }
         ],
         "projects": [
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "machine works"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "babble"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "gallot dreams"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "splunk"
             },
             {
-                "href": "google.com",
+                "href": "#",
                 "label": "fire portal"
             }
         ]

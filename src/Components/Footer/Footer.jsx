@@ -7,11 +7,10 @@ const StyledFooter = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 300px;
+    height: 450px;
     flex-wrap: wrap;
     background: black;
     color: #f8f8f8;
-    position: absolute;
     bottom: 0;
 
     .info-wrapper{
@@ -19,6 +18,12 @@ const StyledFooter = styled.div`
         display: flex;
         padding: 30px 50px 20px 50px;
         overflow: hidden;
+        flex-wrap: wrap;
+        background: black;
+    }
+
+    @media (max-width: 480px) {
+        height: 100%;
     }
 `
 
@@ -30,10 +35,16 @@ const StyledInfo = styled.div`
     p{
         color: #bdbdbd;
     }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        flex: 1 0 100%;
+    }
 `
 
 const StyledCopyright = styled.div`
     flex: 1 0 100%;
+    background: black;
 
     h5{
         padding-left: 50px;
@@ -47,6 +58,13 @@ const StyledColumn = styled.div`
     padding: 0 50px 0 50px;
     h2{
         margin: 0 0 15px 0;
+        font-weight: 100;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        flex: 1 0 100%;
+        padding: 10px 0 0 0;
     }
 `
 
@@ -55,6 +73,12 @@ const StyledColumnWrapper = styled.div`
     flex-direction: row;
     display: flex;
     justify-content: flex-start;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        flex: 1 0 100%;
+        flex-wrap: wrap;
+    }
 `
 
 const StyledFooterLink = styled.a`
@@ -62,6 +86,9 @@ const StyledFooterLink = styled.a`
     text-decoration: none;
     color: #898989;
     margin: 0 0 10px 0;
+    :hover{
+        color: #c782f2;
+    }
 `
 
 export default class Footer extends React.Component {  

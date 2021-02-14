@@ -39172,7 +39172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 550px;\n    height: 300px;\n    box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n    display: flex;\n    margin: auto;\n    flex-wrap: wrap;\n    background: #ffffffeb;\n\n    .title{\n        display: flex;\n        width: 100%;\n        height: 150px;\n        flex: 1 0 100%;\n        align-items: center;\n        padding-left: 20px;\n    }\n\n    .header{ \n        justify-self: center;\n        display: block;\n        align-self: center\n    }\n\n    p {\n        display: -webkit-box;\n        -webkit-line-clamp: 5;\n        -webkit-box-orient: vertical;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        padding-left: 10px;\n        font-size: 16px;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 550px;\n    height: 300px;\n    box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n    display: flex;\n    margin: auto;\n    flex-wrap: wrap;\n    background: #ffffffeb;\n    @media (max-width: 480px) {\n        width: 100%;\n    }\n\n    .title{\n        display: flex;\n        width: 100%;\n        height: 150px;\n        flex: 1 0 100%;\n        align-items: center;\n        padding-left: 20px;\n    }\n\n    .header{ \n        justify-self: center;\n        display: block;\n        align-self: center\n    }\n\n    p {\n        display: -webkit-box;\n        -webkit-line-clamp: 5;\n        -webkit-box-orient: vertical;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        padding-left: 10px;\n        font-size: 16px;\n        @media (max-width: 480px) {\n            -webkit-line-clamp: 7;\n            height: 126px;\n        }\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39230,7 +39230,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject6() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    text-transform : capitalize;\n    text-decoration: none;\n    color: #898989;\n    margin: 0 0 10px 0;\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    text-transform : capitalize;\n    text-decoration: none;\n    color: #898989;\n    margin: 0 0 10px 0;\n    :hover{\n        color: #c782f2;\n    }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -39240,7 +39240,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    width: 80%;\n    flex-direction: row;\n    display: flex;\n    justify-content: flex-start;\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    width: 80%;\n    flex-direction: row;\n    display: flex;\n    justify-content: flex-start;\n\n    @media (max-width: 480px) {\n        width: 100%;\n        flex: 1 0 100%;\n        flex-wrap: wrap;\n    }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -39250,7 +39250,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    text-transform : capitalize;\n    display: flex;\n    flex-direction: column;\n    padding: 0 50px 0 50px;\n    h2{\n        margin: 0 0 15px 0;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    text-transform : capitalize;\n    display: flex;\n    flex-direction: column;\n    padding: 0 50px 0 50px;\n    h2{\n        margin: 0 0 15px 0;\n        font-weight: 100;\n    }\n\n    @media (max-width: 480px) {\n        width: 100%;\n        flex: 1 0 100%;\n        padding: 10px 0 0 0;\n    }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -39260,7 +39260,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    flex: 1 0 100%;\n\n    h5{\n        padding-left: 50px;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    flex: 1 0 100%;\n    background: black;\n\n    h5{\n        padding-left: 50px;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -39270,7 +39270,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    width: 20%;\n    h1{\n        margin: 0 0 20px 0;\n    }\n    p{\n        color: #bdbdbd;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    width: 20%;\n    h1{\n        margin: 0 0 20px 0;\n    }\n    p{\n        color: #bdbdbd;\n    }\n\n    @media (max-width: 480px) {\n        width: 100%;\n        flex: 1 0 100%;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -39280,7 +39280,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    display: flex;\n    flex-direction: row;\n    width: 100%;\n    height: 300px;\n    flex-wrap: wrap;\n    background: black;\n    color: #f8f8f8;\n    position: absolute;\n    bottom: 0;\n\n    .info-wrapper{\n        width: 100%;\n        display: flex;\n        padding: 30px 50px 20px 50px;\n        overflow: hidden;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    display: flex;\n    flex-direction: row;\n    width: 100%;\n    height: 300px;\n    flex-wrap: wrap;\n    background: black;\n    color: #f8f8f8;\n    bottom: 0;\n\n    .info-wrapper{\n        width: 100%;\n        display: flex;\n        padding: 30px 50px 20px 50px;\n        overflow: hidden;\n        flex-wrap: wrap;\n        background: black;\n    }\n\n    @media (max-width: 480px) {\n        height: 100%;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -40202,56 +40202,56 @@ module.exports = {
 module.exports = {
   "footerLinks": {
     "about": [{
-      "href": "google.com",
+      "href": "#",
       "label": "home"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "who are we"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "what we do"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "contact us"
     }],
     "follow": [{
-      "href": "google.com",
+      "href": "#",
       "label": "twitter"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "facebook"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "instagram"
     }],
     "legal": [{
-      "href": "google.com",
+      "href": "#",
       "label": "privacy"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "terms"
     }],
     "jobs": [{
-      "href": "google.com",
+      "href": "#",
       "label": "why us"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "open roles"
     }],
     "projects": [{
-      "href": "google.com",
+      "href": "#",
       "label": "machine works"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "babble"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "gallot dreams"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "splunk"
     }, {
-      "href": "google.com",
+      "href": "#",
       "label": "fire portal"
     }]
   },

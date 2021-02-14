@@ -7,13 +7,17 @@ import {footerLinks, title, quote, copyright} from './MockData/footer';
 class App extends Component {
 
     render(){
-        return <Footer title={title} quote={quote} columns={footerLinks} copyright={copyright}/>
-        // <Card 
-        //     header={"Test Header"} 
-        //     imgSrc={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjhs7iHlbQgFNbCtlfCjjE-VOuoGuVbIyhGA&usqp=CAU"}
-        //     subHeader={"This an example Test Subheader"}
-        //     innerContent={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero eu enim placerat bibendum. Aliquam placerat eget nisi in interdum. Phasellus ac ante mollis dui egestas mollis in vel dolor. Fusce a leo lorem. Nunc ex enim, malesuada non arcu sit amet, varius aliquet nunc. Integer feugiat mi ac augue hendrerit, sit amet mattis nisl viverra."}
-        // />;
+        return (
+        <div style={{width: "100%"}}>
+            <Card 
+                header={"Test Header"} 
+                imgSrc={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjhs7iHlbQgFNbCtlfCjjE-VOuoGuVbIyhGA&usqp=CAU"}
+                subHeader={"This an example Test Subheader"}
+                innerContent={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at libero eu enim placerat bibendum. Aliquam placerat eget nisi in interdum. Phasellus ac ante mollis dui egestas mollis in vel dolor. Fusce a leo lorem. Nunc ex enim, malesuada non arcu sit amet, varius aliquet nunc. Integer feugiat mi ac augue hendrerit, sit amet mattis nisl viverra."}
+            />;
+            <Footer title={title} quote={quote} columns={footerLinks} copyright={copyright}/>
+        </div>
+        );
     }
 }
 

@@ -8,6 +8,9 @@ export const cardBase = css`
     margin: auto;
     flex-wrap: wrap;
     background: #ffffffeb;
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 
     .title{
         display: flex;
@@ -32,5 +35,9 @@ export const cardBase = css`
         text-overflow: ellipsis;
         padding-left: 10px;
         font-size: 16px;
+        @media (max-width: 480px) {
+            -webkit-line-clamp: 7;
+            height: 126px;
+        }
     }
 `;

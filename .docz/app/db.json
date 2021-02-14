@@ -562,6 +562,45 @@
       ]
     },
     {
+      "key": "dist/Form/Filter/FilterField.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "FilterField",
+          "methods": [
+            {
+              "name": "toggleHidden",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "FilterField",
+          "props": {
+            "checkboxes": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "changeFilter": {
+              "type": {
+                "name": "func"
+              },
+              "required": true,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "dist/Form/AddForm/AddForm.js",
       "value": [
         {
@@ -636,45 +675,6 @@
                 "value": "() => null",
                 "computed": false
               }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "dist/Form/Filter/FilterField.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "FilterField",
-          "methods": [
-            {
-              "name": "toggleHidden",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "FilterField",
-          "props": {
-            "checkboxes": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            },
-            "changeFilter": {
-              "type": {
-                "name": "func"
-              },
-              "required": true,
-              "description": ""
             }
           }
         }
