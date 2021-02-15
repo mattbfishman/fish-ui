@@ -1,0 +1,44 @@
+---
+name: Dropdown
+route: /Dropdown
+---
+
+import { Playground, Props } from 'docz';
+import Dropdown from '../../../../src/Components/Form/Dropdown/Dropdown';
+import {title, items}  from '../../../../src/MockData/dropdown';
+
+#  Dropdown
+
+## Props
+<Props of={Dropdown} />
+
+## Examples 
+
+## Success
+
+<Playground>
+    <Dropdown
+        title={title}
+        items={items}
+        theme={"success"}
+    />
+</Playground>
+
+
+## Error 
+<Playground>
+    <Dropdown
+        title={title}
+        items={items}
+        theme={"error"}
+    />
+</Playground>
+
+
+<Playground>
+    <Dropdown
+        title={title}
+        items={items}
+    />
+</Playground>
+

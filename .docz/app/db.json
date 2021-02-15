@@ -3,7 +3,7 @@
     "title": "Fish Ui Ac",
     "description": "My awesome app using docz",
     "menu": [],
-    "version": "0.1.19",
+    "version": "0.1.20",
     "repository": null,
     "native": false,
     "themeConfig": {},
@@ -166,22 +166,42 @@
       }
     },
     {
-      "key": "documentation/Components/Form/Login/Login.mdx",
+      "key": "documentation/Components/Form/Dropdown/Dropdown.mdx",
       "value": {
-        "name": "Login",
-        "route": "/Login",
-        "id": "251f154d73227efe39be7c5c5625eafa",
-        "filepath": "documentation/Components/Form/Login/Login.mdx",
-        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\Login\\Login.mdx",
+        "name": "Dropdown",
+        "route": "/Dropdown",
+        "id": "9c10281167b70f7efa033421a82168f1",
+        "filepath": "documentation/Components/Form/Dropdown/Dropdown.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\Dropdown\\Dropdown.mdx",
         "link": "",
         "hidden": false,
-        "slug": "documentation-components-form-login-login",
+        "slug": "documentation-components-form-dropdown-dropdown",
         "menu": "",
         "headings": [
           {
-            "slug": "textfield",
+            "slug": "dropdown",
             "depth": 1,
-            "value": "TextField"
+            "value": "Dropdown"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          },
+          {
+            "slug": "success",
+            "depth": 2,
+            "value": "Success"
+          },
+          {
+            "slug": "error",
+            "depth": 2,
+            "value": "Error"
           }
         ]
       }
@@ -233,6 +253,27 @@
             "slug": "extra-large",
             "depth": 3,
             "value": "Extra Large"
+          }
+        ]
+      }
+    },
+    {
+      "key": "documentation/Components/Form/Login/Login.mdx",
+      "value": {
+        "name": "Login",
+        "route": "/Login",
+        "id": "251f154d73227efe39be7c5c5625eafa",
+        "filepath": "documentation/Components/Form/Login/Login.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\Login\\Login.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-form-login-login",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "textfield",
+            "depth": 1,
+            "value": "TextField"
           }
         ]
       }
@@ -454,6 +495,31 @@
                 "value": "''",
                 "computed": false
               }
+            },
+            "theme": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'default'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'danger'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'default'",
+                "computed": false
+              }
             }
           }
         }
@@ -480,6 +546,63 @@
               }
             },
             "name": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "dist/Footer/Footer.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Footer",
+          "methods": [],
+          "actualName": "Footer",
+          "props": {
+            "title": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "columns": {
+              "type": {
+                "name": "object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              }
+            },
+            "copyright": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "quote": {
               "type": {
                 "name": "string"
               },
@@ -562,45 +685,6 @@
       ]
     },
     {
-      "key": "dist/Form/Filter/FilterField.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "FilterField",
-          "methods": [
-            {
-              "name": "toggleHidden",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "FilterField",
-          "props": {
-            "checkboxes": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            },
-            "changeFilter": {
-              "type": {
-                "name": "func"
-              },
-              "required": true,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "dist/Form/AddForm/AddForm.js",
       "value": [
         {
@@ -675,6 +759,45 @@
                 "value": "() => null",
                 "computed": false
               }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "dist/Form/Filter/FilterField.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "FilterField",
+          "methods": [
+            {
+              "name": "toggleHidden",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "FilterField",
+          "props": {
+            "checkboxes": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "changeFilter": {
+              "type": {
+                "name": "func"
+              },
+              "required": true,
+              "description": ""
             }
           }
         }
@@ -1274,6 +1397,72 @@
               "description": "",
               "defaultValue": {
                 "value": "() => null",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Components/Form/Dropdown/Dropdown.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Dropdown",
+          "methods": [
+            {
+              "name": "handleMouseHover",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "toggleHoverState",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "state",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Dropdown",
+          "props": {
+            "title": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "items": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "theme": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'defaut'",
                 "computed": false
               }
             }

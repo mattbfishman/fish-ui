@@ -6062,9 +6062,11 @@ var scope_4 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scop
 
 var scope_5 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c74469494f6ae447b082999814a66582.js").default;
 
-var scope_6 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+var scope_6 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/cb1ba3b9e33dfe2b591c0fb6b9770500.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/cb1ba3b9e33dfe2b591c0fb6b9770500.js").default;
 
-var __DOCZ_DUMMY_EXPORT_DEFAULT = Object.assign({}, scope_0, scope_1, scope_2, scope_3, scope_4, scope_5, scope_6);
+var scope_7 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+
+var __DOCZ_DUMMY_EXPORT_DEFAULT = Object.assign({}, scope_0, scope_1, scope_2, scope_3, scope_4, scope_5, scope_6, scope_7);
 
 /* harmony default export */ __webpack_exports__["default"] = (__DOCZ_DUMMY_EXPORT_DEFAULT);
 
@@ -6695,6 +6697,26 @@ __webpack_require__.r(__webpack_exports__);
 
 function _arrayWithoutHoles(arr) {
   if (Array.isArray(arr)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(arr);
+}
+
+/***/ }),
+
+/***/ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _assertThisInitialized; });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
 }
 
 /***/ }),
@@ -39280,7 +39302,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    display: flex;\n    flex-direction: row;\n    width: 100%;\n    height: 300px;\n    flex-wrap: wrap;\n    background: black;\n    color: #f8f8f8;\n    bottom: 0;\n\n    .info-wrapper{\n        width: 100%;\n        display: flex;\n        padding: 30px 50px 20px 50px;\n        overflow: hidden;\n        flex-wrap: wrap;\n        background: black;\n    }\n\n    @media (max-width: 480px) {\n        height: 100%;\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    display: flex;\n    flex-direction: row;\n    width: 100%;\n    height: 450px;\n    flex-wrap: wrap;\n    background: black;\n    color: #f8f8f8;\n    bottom: 0;\n\n    .info-wrapper{\n        width: 100%;\n        display: flex;\n        padding: 30px 50px 20px 50px;\n        overflow: hidden;\n        flex-wrap: wrap;\n        background: black;\n    }\n\n    @media (max-width: 480px) {\n        height: 100%;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39397,6 +39419,191 @@ function FooterLink(props) {
 }
 
 FooterLink.defaultProps = {
+  label: '',
+  href: ''
+};
+
+/***/ }),
+
+/***/ "../src/Components/Form/Dropdown/Dropdown.jsx":
+/*!****************************************************!*\
+  !*** ../src/Components/Form/Dropdown/Dropdown.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Dropdown; });
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteralLoose */ "../node_modules/gatsby/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteralLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/map */ "lodash/map");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Constants_theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../Constants/theme */ "../src/Constants/theme.js");
+/* harmony import */ var _Constants_theme__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Constants_theme__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    text-decoration: none;\n    text-transform: capitalize;\n    padding: 10px 20px 10px 20px;\n    width: 100%;\n    text-align: center;\n    :hover{\n        color: ", ";\n    }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    width: 100px;\n    padding: 10px 10px 10px 10px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    min-height: 100px;\n    margin: 20px 0 0 20px;\n    width: max-content;\n    \n    .dropdown-item-wrapper{\n        flex-direction: column;\n        display: flex;\n        align-items: center;\n        padding: 0 0 10px 0;\n        box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n        margin-top: 10px;\n        border-radius: 10px;\n        width: fit-content;\n    }\n\n    :hover > .title{\n        color: ", ";\n        border-left: 5px solid ", ";\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+
+var StyledDropdown = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject(), function (props) {
+  return props.active;
+}, function (props) {
+  return props.border;
+});
+var StyledTitle = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject2());
+var StyledDropdownItem = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].a(_templateObject3(), function (props) {
+  return props.border;
+});
+
+var Dropdown = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(Dropdown, _React$Component);
+
+  function Dropdown(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this;
+    _this.handleMouseHover = _this.handleMouseHover.bind(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__["default"])(_this));
+    _this.state = {
+      hovering: false
+    };
+    return _this;
+  }
+
+  var _proto = Dropdown.prototype;
+
+  _proto.handleMouseHover = function handleMouseHover() {
+    this.setState(this.toggleHoverState);
+  };
+
+  _proto.toggleHoverState = function toggleHoverState(state) {
+    return {
+      hovering: !state.hovering
+    };
+  };
+
+  _proto.render = function render() {
+    var me = this,
+        props = me && me.props || {},
+        state = me && me.state || {},
+        hovering = state.hovering,
+        title = props.title,
+        items = props.items,
+        theme = props && props.theme && _Constants_theme__WEBPACK_IMPORTED_MODULE_7__["themes"][props.theme] || _Constants_theme__WEBPACK_IMPORTED_MODULE_7__["themes"].default,
+        border = theme && theme.border,
+        active = theme && theme.active,
+        dropdownItems = lodash_map__WEBPACK_IMPORTED_MODULE_6___default()(items, function (item, idx) {
+      var href = item.href,
+          label = item.label;
+      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(DropdownItem, {
+        href: href,
+        label: label,
+        key: idx,
+        border: border
+      });
+    });
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyledDropdown, {
+      border: border,
+      active: active,
+      onMouseEnter: this.handleMouseHover,
+      onMouseLeave: this.handleMouseHover
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyledTitle, {
+      className: "title"
+    }, title), hovering && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
+      className: "dropdown-item-wrapper"
+    }, dropdownItems));
+  };
+
+  return Dropdown;
+}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
+
+
+
+if (typeof Dropdown !== 'undefined' && Dropdown && Dropdown === Object(Dropdown) && Object.isExtensible(Dropdown) && !Dropdown.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Dropdown, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Dropdown",
+      filename: "src/Components/Form/Dropdown/Dropdown.jsx"
+    }
+  });
+}
+
+if (typeof Dropdown !== 'undefined' && Dropdown && Dropdown === Object(Dropdown) && Object.isExtensible(Dropdown) && !Dropdown.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(Dropdown, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "Dropdown",
+      filename: "src/Components/Form/Dropdown/Dropdown.jsx"
+    }
+  });
+}
+
+;
+Dropdown.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  items: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array,
+  theme: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string
+};
+Dropdown.defaultProps = {
+  title: '',
+  items: [],
+  theme: 'defaut'
+};
+
+function DropdownItem(props) {
+  var href = props.href,
+      label = props.label,
+      border = props.border;
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyledDropdownItem, {
+    border: border,
+    href: href
+  }, label);
+}
+
+DropdownItem.defaultProps = {
   label: '',
   href: ''
 };
@@ -40177,17 +40384,43 @@ module.exports = {
   themes: {
     "error": {
       "background": "#ffe1e1",
-      "border": "red"
+      "border": "red",
+      "active": "#da1a1a"
     },
     "success": {
       "background": "#e4ffe8",
-      "border": "#0dde31"
+      "border": "#0dde31",
+      "active": "#24b029"
     },
     "default": {
       "background": "#f8f8f8",
-      "border": "#bdbdbd"
+      "border": "#bdbdbd",
+      "active": "#898989"
     }
   }
+};
+
+/***/ }),
+
+/***/ "../src/MockData/dropdown.js":
+/*!***********************************!*\
+  !*** ../src/MockData/dropdown.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "title": "Dropdown",
+  "items": [{
+    "href": "#",
+    "label": "item1 that is really long"
+  }, {
+    "href": "#",
+    "label": "item2"
+  }, {
+    "href": "#",
+    "label": "item3"
+  }]
 };
 
 /***/ }),
@@ -40717,6 +40950,36 @@ __webpack_require__.r(__webpack_exports__);
   Props: docz__WEBPACK_IMPORTED_MODULE_0__["Props"],
   Button: _src_Components_Button_Button__WEBPACK_IMPORTED_MODULE_1__["default"],
   React: react__WEBPACK_IMPORTED_MODULE_2__
+});
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/cb1ba3b9e33dfe2b591c0fb6b9770500.js":
+/*!********************************************************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/cb1ba3b9e33dfe2b591c0fb6b9770500.js ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var docz__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! docz */ "../node_modules/docz/dist/index.esm.js");
+/* harmony import */ var _src_Components_Form_Dropdown_Dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/Components/Form/Dropdown/Dropdown */ "../src/Components/Form/Dropdown/Dropdown.jsx");
+/* harmony import */ var _src_MockData_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/MockData/dropdown */ "../src/MockData/dropdown.js");
+/* harmony import */ var _src_MockData_dropdown__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_src_MockData_dropdown__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  Playground: docz__WEBPACK_IMPORTED_MODULE_0__["Playground"],
+  Props: docz__WEBPACK_IMPORTED_MODULE_0__["Props"],
+  Dropdown: _src_Components_Form_Dropdown_Dropdown__WEBPACK_IMPORTED_MODULE_1__["default"],
+  title: _src_MockData_dropdown__WEBPACK_IMPORTED_MODULE_2__["title"],
+  items: _src_MockData_dropdown__WEBPACK_IMPORTED_MODULE_2__["items"],
+  React: react__WEBPACK_IMPORTED_MODULE_3__
 });
 
 /***/ }),
