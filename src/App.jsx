@@ -15,6 +15,13 @@ class App extends Component {
                 title={title}
                 items={items}
                 theme={"success"}
+                toggle={true}
+            />
+            <Dropdown
+                title={title}
+                items={items}
+                theme={"success"}
+                toggle={false}
             />
             {/* <Card 
                 header={"Test Header"} 

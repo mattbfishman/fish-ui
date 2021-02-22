@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
 import {themes} from '../../../Constants/theme';
+import onClickOutside from 'react-onclickoutside'
 
 const StyledDropdown = styled.div`
     margin: 20px 0 0 20px;
@@ -25,7 +26,8 @@ const StyledDropdown = styled.div`
         margin-left: 5px;
     }
 
-    :hover > .title{
+    :hover > .title,
+    &.active > .title{
         color: ${props => props.active};
         border-left: 5px solid ${props => props.border};
     }
@@ -78,19 +80,23 @@ const StyledDropdownTitle = styled.div`
     }
 `;
 
-export default class Dropdown extends React.Component {  
+class Dropdown extends React.Component {  
     constructor(props){
         super(props);
-        this.handleMouseHover = this.handleMouseHover.bind(this);
+        this.handleShowDropdown = this.handleShowDropdown.bind(this);
         this.state = {
             hovering: false
         };
     }
 
-    handleMouseHover() {
+    handleShowDropdown() {
         this.setState(this.toggleHoverState);
-      }
+    }
     
+    handleClickOutside() {
+        this.setState({hovering: false})
+    }
+
     toggleHoverState(state) {
         return {
             hovering: !state.hovering
@@ -98,15 +104,17 @@ export default class Dropdown extends React.Component {
     }
 
     render() {
-        var me             = this,
-            props          = (me && me.props) || {},
-            state          = (me && me.state) || {},
-            {hovering}     = state,
-            {title, items} = props,
-            theme          = (props && props.theme && themes[props.theme]) || themes.default,
-            border         = (theme && theme.border),
-            active         = (theme && theme.active),
-            dropdownItems  = map(items, function(item, idx){
+        var me                      = this,
+            props                   = (me && me.props) || {},
+            state                   = (me && me.state) || {},
+            {hovering}              = state,
+            {title, items, toggle } = props,
+            theme                   = (props && props.theme && themes[props.theme]) || themes.default,
+            border                  = (theme && theme.border),
+            active                  = (theme && theme.active),
+            mouse                   = !toggle ? this.handleShowDropdown : undefined,
+            click                   = toggle ? this.handleShowDropdown : undefined,
+            dropdownItems           = map(items, function(item, idx){
                 let {href, label, title, items} = item;
                 if(title){
                     return <DropdownItemTitle title={title} key={idx} border={border} items={items}/>
@@ -122,7 +130,12 @@ export default class Dropdown extends React.Component {
                 caret = <span className="caret">&nabla;</span>
             }
         return (
-            <StyledDropdown border={border} active={active} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover}>
+            <StyledDropdown
+                className={toggle && hovering ? "active" : ""} 
+                border={border} active={active} 
+                onMouseEnter={mouse} 
+                onMouseLeave={mouse} 
+                onClick={click}>
                 <StyledTitle className="title" >
                     {title} 
                     {caret}
@@ -137,17 +150,21 @@ export default class Dropdown extends React.Component {
     }
 };
 
+export default onClickOutside(Dropdown);
+
 
 Dropdown.propTypes = {
     title: PropTypes.string,
     items: PropTypes.array,
-    theme: PropTypes.string
+    theme: PropTypes.string,
+    toggle: PropTypes.bool
 }
 
 Dropdown.defaultProps = {
     title: '',
     items: [],
-    theme: 'defaut'
+    theme: 'defaut',
+    toggle: false
 }
 
 function DropdownItem(props){

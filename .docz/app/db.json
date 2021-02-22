@@ -194,6 +194,11 @@
             "value": "Examples"
           },
           {
+            "slug": "toggle",
+            "depth": 2,
+            "value": "Toggle"
+          },
+          {
             "slug": "success",
             "depth": 2,
             "value": "Success"
@@ -202,6 +207,27 @@
             "slug": "error",
             "depth": 2,
             "value": "Error"
+          }
+        ]
+      }
+    },
+    {
+      "key": "documentation/Components/Form/Login/Login.mdx",
+      "value": {
+        "name": "Login",
+        "route": "/Login",
+        "id": "251f154d73227efe39be7c5c5625eafa",
+        "filepath": "documentation/Components/Form/Login/Login.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\Login\\Login.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-form-login-login",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "textfield",
+            "depth": 1,
+            "value": "TextField"
           }
         ]
       }
@@ -253,27 +279,6 @@
             "slug": "extra-large",
             "depth": 3,
             "value": "Extra Large"
-          }
-        ]
-      }
-    },
-    {
-      "key": "documentation/Components/Form/Login/Login.mdx",
-      "value": {
-        "name": "Login",
-        "route": "/Login",
-        "id": "251f154d73227efe39be7c5c5625eafa",
-        "filepath": "documentation/Components/Form/Login/Login.mdx",
-        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\Login\\Login.mdx",
-        "link": "",
-        "hidden": false,
-        "slug": "documentation-components-form-login-login",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "textfield",
-            "depth": 1,
-            "value": "TextField"
           }
         ]
       }

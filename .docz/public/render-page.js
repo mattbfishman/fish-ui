@@ -39452,8 +39452,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function _templateObject4() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    text-transform: capitalize;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    padding-bottom: 10px;\n    padding-top: 10px;\n\n    h4{\n        margin: 10px 0 10px 20px;\n        text-align :left;\n        width: 100%;\n    }\n\n    > a {\n        padding: 5px 0 5px 20px;\n        color: #7f7f7f;\n        margin: 0;\n    }\n\n    a:last-child{\n        padding: 10px 0 20px 20px;\n    }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    text-decoration: none;\n    text-transform: capitalize;\n    padding: 10px 20px 10px 20px;\n    width: 100%;\n    text-align: center;\n    :hover{\n        color: ", ";\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    text-decoration: none;\n    text-transform: capitalize;\n    padding: 10px 0 10px 40px;\n    margin: 0 20px 0 20px;\n    height: 30px;\n    width: 100%;\n    text-align: left;\n    color: #2D3747;\n    font-size: 14px;\n    display: flex;\n    align-items: center;\n    :hover{\n        color: ", ";\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -39473,7 +39483,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    min-height: 100px;\n    margin: 20px 0 0 20px;\n    width: max-content;\n    \n    .dropdown-item-wrapper{\n        flex-direction: column;\n        display: flex;\n        align-items: center;\n        padding: 0 0 10px 0;\n        box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n        margin-top: 10px;\n        border-radius: 10px;\n        width: fit-content;\n    }\n\n    :hover > .title{\n        color: ", ";\n        border-left: 5px solid ", ";\n    }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteralLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n    margin: 20px 0 0 20px;\n    width: max-content;\n    \n    .dropdown-item-wrapper{\n        flex-direction: column;\n        display: flex;\n        align-items: center;\n        padding: 0 0 10px 0;\n        box-shadow: 0 4px 6px hsl(0deg 0% 0% / 20%);\n        margin-top: 10px;\n        border-radius: 10px;\n        width: fit-content;\n        min-width: 100px;\n        max-width: 250px\n    }\n\n    .caret{\n        margin-left: 5px;\n    }\n\n    :hover > .title{\n        color: ", ";\n        border-left: 5px solid ", ";\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -39497,6 +39507,7 @@ var StyledTitle = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(
 var StyledDropdownItem = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].a(_templateObject3(), function (props) {
   return props.border;
 });
+var StyledDropdownTitle = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject4());
 
 var Dropdown = /*#__PURE__*/function (_React$Component) {
   Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(Dropdown, _React$Component);
@@ -39536,14 +39547,38 @@ var Dropdown = /*#__PURE__*/function (_React$Component) {
         active = theme && theme.active,
         dropdownItems = lodash_map__WEBPACK_IMPORTED_MODULE_6___default()(items, function (item, idx) {
       var href = item.href,
-          label = item.label;
-      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(DropdownItem, {
-        href: href,
-        label: label,
-        key: idx,
-        border: border
-      });
-    });
+          label = item.label,
+          title = item.title,
+          items = item.items;
+
+      if (title) {
+        return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(DropdownItemTitle, {
+          title: title,
+          key: idx,
+          border: border,
+          items: items
+        });
+      } else {
+        return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(DropdownItem, {
+          href: href,
+          label: label,
+          key: idx,
+          border: border
+        });
+      }
+    }),
+        caret;
+
+    if (hovering) {
+      caret = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("span", {
+        className: "caret"
+      }, "\u25BC");
+    } else {
+      caret = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("span", {
+        className: "caret"
+      }, "\u2207");
+    }
+
     return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyledDropdown, {
       border: border,
       active: active,
@@ -39551,7 +39586,7 @@ var Dropdown = /*#__PURE__*/function (_React$Component) {
       onMouseLeave: this.handleMouseHover
     }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyledTitle, {
       className: "title"
-    }, title), hovering && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
+    }, title, caret), hovering && Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("div", {
       className: "dropdown-item-wrapper"
     }, dropdownItems));
   };
@@ -39606,6 +39641,28 @@ function DropdownItem(props) {
 DropdownItem.defaultProps = {
   label: '',
   href: ''
+};
+
+function DropdownItemTitle(props) {
+  var title = props.title,
+      items = props.items,
+      border = props.border,
+      dropdownItems = lodash_map__WEBPACK_IMPORTED_MODULE_6___default()(items, function (item, idx) {
+    var href = item.href,
+        label = item.label;
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(DropdownItem, {
+      href: href,
+      label: label,
+      key: idx,
+      border: border
+    });
+  });
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])(StyledDropdownTitle, null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_8__["jsx"])("h4", null, title), dropdownItems);
+}
+
+DropdownItemTitle.defaultProps = {
+  title: '',
+  icon: ''
 };
 
 /***/ }),
@@ -40412,14 +40469,38 @@ module.exports = {
 module.exports = {
   "title": "Dropdown",
   "items": [{
-    "href": "#",
-    "label": "item1 that is really long"
+    "title": "title",
+    "items": [{
+      "href": "#",
+      "label": "item1 that is really long"
+    }, {
+      "href": "#",
+      "label": "item2"
+    }]
   }, {
-    "href": "#",
-    "label": "item2"
+    "title": "second title",
+    "items": [{
+      "href": "#",
+      "label": "inner1 right here"
+    }, {
+      "href": "#",
+      "label": "inner2"
+    }, {
+      "href": "#",
+      "label": "inner3 here"
+    }]
   }, {
     "href": "#",
     "label": "item3"
+  }, {
+    "href": "#",
+    "label": "item4 i go here"
+  }, {
+    "href": "#",
+    "label": "item5"
+  }, {
+    "href": "#",
+    "label": "item6 long"
   }]
 };
 
