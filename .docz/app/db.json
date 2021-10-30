@@ -3,7 +3,7 @@
     "title": "Fish Ui Ac",
     "description": "My awesome app using docz",
     "menu": [],
-    "version": "0.1.20",
+    "version": "0.1.21",
     "repository": null,
     "native": false,
     "themeConfig": {},
@@ -151,6 +151,37 @@
             "slug": "footer",
             "depth": 1,
             "value": "Footer"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          }
+        ]
+      }
+    },
+    {
+      "key": "documentation/Components/Navbar/Navbar.mdx",
+      "value": {
+        "name": "Navbar",
+        "route": "/Navbar",
+        "id": "5a7f843707bddf6f8d124769c020450c",
+        "filepath": "documentation/Components/Navbar/Navbar.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Navbar\\Navbar.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-navbar-navbar",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "navbar",
+            "depth": 1,
+            "value": "Navbar"
           },
           {
             "slug": "props",
@@ -770,6 +801,91 @@
       ]
     },
     {
+      "key": "dist/Form/Dropdown/Dropdown.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Dropdown",
+          "methods": [
+            {
+              "name": "handleShowDropdown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "toggleHoverState",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "state",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Dropdown",
+          "props": {
+            "title": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "items": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "theme": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'defaut'",
+                "computed": false
+              }
+            },
+            "toggle": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "dist/Form/Filter/FilterField.js",
       "value": [
         {
@@ -1281,6 +1397,53 @@
                 "value": "[]",
                 "computed": false
               }
+            },
+            "theme": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'default'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'success'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'danger'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'default'",
+                "computed": false
+              }
+            },
+            "bgColor": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'fff'",
+                "computed": false
+              }
+            },
+            "txtColor": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'000'",
+                "computed": false
+              }
             }
           }
         }
@@ -1417,7 +1580,14 @@
           "displayName": "Dropdown",
           "methods": [
             {
-              "name": "handleMouseHover",
+              "name": "handleShowDropdown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
               "docblock": null,
               "modifiers": [],
               "params": [],
@@ -1430,6 +1600,7 @@
               "params": [
                 {
                   "name": "state",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -1468,6 +1639,17 @@
               "description": "",
               "defaultValue": {
                 "value": "'defaut'",
+                "computed": false
+              }
+            },
+            "toggle": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
                 "computed": false
               }
             }
