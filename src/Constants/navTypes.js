@@ -4,6 +4,7 @@ module.exports = {
         NAVLINK: "navLink",
         LOGIN  : 'login',
         SEARCH : 'search',
-        SOCIAL : 'social'
+        SOCIAL : 'social',
+        CART   : 'cart'
     }
 }

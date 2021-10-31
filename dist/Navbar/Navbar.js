@@ -1,62 +1,56 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 import map from 'lodash/map';
-import { Link } from "react-router-dom";
+import groupBy from 'lodash/groupBy';
+import * as Styles from './NavStyles';
+import { BrowserRouter as Router } from "react-router-dom";
 import PropTypes from 'prop-types';
-import './Navbar.scss';
-
-class Navbar extends Component {
+import NavGroup from './NavGroup';
+const ALIGN = 'align';
+const StyledNav = styled.nav`
+    ${Styles.navBase};
+    background: ${props => props.bgColor};
+    color: ${props => props.txtColor};
+`;
+const StyledNavWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+`;
+export default class Navbar extends React.Component {
   render() {
     var me = this,
-        props = me && me.props,
-        logo = props && props.logo,
-        navItems = props && props.navItems,
-        navItemsEle = map(navItems, function (navItem, idx) {
-      return /*#__PURE__*/React.createElement(Navitem, {
-        key: idx,
-        path: navItem.path,
-        label: navItem.label
+        props = me && me.props || {},
+        bgColor = props.bgColor,
+        txtColor = props.txtColor,
+        navItems = props.navItems,
+        groupedNavItems = groupBy(navItems, ALIGN),
+        navGroups = map(groupedNavItems, function (group, key) {
+      return /*#__PURE__*/React.createElement(NavGroup, {
+        key: key,
+        group: group,
+        align: key,
+        txtColor: txtColor
       });
     });
-    return /*#__PURE__*/React.createElement("div", {
-      className: "navbar"
-    }, /*#__PURE__*/React.createElement("img", {
-      className: "logo",
-      src: logo,
-      alt: "Nav icon"
-    }), /*#__PURE__*/React.createElement("ul", {
-      className: "nav-items"
-    }, navItemsEle));
+    return /*#__PURE__*/React.createElement(Router, null, /*#__PURE__*/React.createElement(StyledNav, {
+      bgColor: bgColor,
+      txtColor: txtColor
+    }, /*#__PURE__*/React.createElement(StyledNavWrapper, null, navGroups)));
   }
 
 }
-
 ;
 Navbar.propTypes = {
-  navItems: PropTypes.array
+  navItems: PropTypes.array,
+  theme: PropTypes.oneOf(['default', 'success', 'danger']),
+  bgColor: PropTypes.string,
+  txtColor: PropTypes.string
 };
 Navbar.defaultProps = {
-  navItems: []
+  navItems: [],
+  theme: 'default',
+  bgColor: 'fff',
+  txtColor: '000'
 };
-
-class Navitem extends Component {
-  render() {
-    var me = this,
-        props = me && me.props,
-        label = props && props.label,
-        path = props && props.path;
-    return /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
-      to: path
-    }, label));
-  }
-
-}
-
-Navitem.propTypes = {
-  label: PropTypes.string,
-  path: PropTypes.string
-};
-Navitem.defaultProps = {
-  label: '',
-  path: ''
-};
-export default Navbar;
