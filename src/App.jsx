@@ -2,23 +2,25 @@ import React, {Component} from 'react';
 import Login from './Components/Form/Login/Login';
 import Card from './Components/Card/Card';
 import Footer from './Components/Footer/Footer';
-import Dropdown from './Components/Form/Dropdown/Dropdown';
+import SearchField from './Components/Form/Search/SearchField';
 import Navbar from './Components/Navbar/Navbar';
 // import {footerLinks, title, quote, copyright} from './MockData/footer';
-// import {title, items} from './MockData/dropdown';
-import {items} from './MockData/nav';
+import {title, items} from './MockData/dropdown';
+// import {items} from './MockData/nav';
 
 class App extends Component {
 
     render(){
         return (
         <div style={{width: "100%"}}>
-            <Navbar
+            {/* <Navbar
                 bgColor={"black"}
                 txtColor={"gray"}
                 navItems={items}
+            /> */}
+           <SearchField
+                placeholder={"Test"}
             />
-           
         </div>
         );
     }

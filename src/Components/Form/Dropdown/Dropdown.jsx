@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
 import {themes} from '../../../Constants/theme';
-import onClickOutside from 'react-onclickoutside'
+import onClickOutside from 'react-onclickoutside';
+import { BsCaretDown, BsCaretDownFill } from 'react-icons/bs';
 
 const StyledDropdown = styled.div`
     margin: 20px 0 0 20px;
@@ -24,6 +25,7 @@ const StyledDropdown = styled.div`
 
     .caret{
         margin-left: 5px;
+        font-size: 20px;
     }
 
     :hover > .title,
@@ -35,7 +37,8 @@ const StyledDropdown = styled.div`
 
 const StyledTitle = styled.div`
     width: 100px;
-    padding: 10px 10px 10px 10px;
+    padding: 15px;
+    display: flex;
 `
 
 const StyledDropdownItem = styled.a`
@@ -125,9 +128,9 @@ class Dropdown extends React.Component {
             caret;
 
             if(hovering){
-                caret = <span className="caret">&#9660;</span>
+                caret = <BsCaretDownFill className="caret" />;
             } else {
-                caret = <span className="caret">&nabla;</span>
+                caret = <BsCaretDown className="caret" />;
             }
         return (
             <StyledDropdown
