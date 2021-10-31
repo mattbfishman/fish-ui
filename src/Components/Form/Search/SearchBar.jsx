@@ -6,7 +6,7 @@ import TextField from '../TextField/TextField';
 
 const StyledIcon = styled(BsSearch)`
     position: absolute;
-    top: 22.5px;
+    transform: translate(0, 40%);
     margin-left: 5px;
 `
 
