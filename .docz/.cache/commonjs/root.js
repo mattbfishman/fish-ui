@@ -27,6 +27,8 @@ var _fastRefreshOverlay = _interopRequireDefault(require("./fast-refresh-overlay
 
 var _errorOverlayHandler = require("./error-overlay-handler");
 
+var _loadingIndicator = require("./loading-indicator");
+
 // TODO: Remove entire block when we make fast-refresh the default
 // In fast-refresh, this logic is all moved into the `error-overlay-handler`
 if (window.__webpack_hot_middleware_reporter__ !== undefined && process.env.GATSBY_HOT_LOADER !== `fast-refresh`) {

@@ -14,6 +14,7 @@ exports.components = {
   "component---documentation-components-form-select-field-select-field-mdx": hot(preferDefault(require("C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\SelectField\\SelectField.mdx"))),
   "component---documentation-components-form-text-field-text-field-mdx": hot(preferDefault(require("C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Form\\TextField\\TextField.mdx"))),
   "component---documentation-components-navbar-navbar-mdx": hot(preferDefault(require("C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Navbar\\Navbar.mdx"))),
+  "component---documentation-components-social-social-mdx": hot(preferDefault(require("C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Social\\Social.mdx"))),
   "component---documentation-index-mdx": hot(preferDefault(require("C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\index.mdx"))),
   "component---src-pages-404-js": hot(preferDefault(require("C:\\Users\\Matth\\Documents\\fish-ui\\.docz\\src\\pages\\404.js")))
 }

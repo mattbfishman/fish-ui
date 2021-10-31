@@ -197,6 +197,37 @@
       }
     },
     {
+      "key": "documentation/Components/Social/Social.mdx",
+      "value": {
+        "name": "Social",
+        "route": "/Social",
+        "id": "9d7de913937efc29064bf5fed8071596",
+        "filepath": "documentation/Components/Social/Social.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Social\\Social.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-social-social",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "social",
+            "depth": 1,
+            "value": "Social"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          }
+        ]
+      }
+    },
+    {
       "key": "documentation/Components/Form/Dropdown/Dropdown.mdx",
       "value": {
         "name": "Dropdown",
@@ -960,77 +991,6 @@
       ]
     },
     {
-      "key": "dist/Form/SelectField/SelectField.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SelectField",
-          "methods": [],
-          "actualName": "SelectField",
-          "props": {
-            "size": {
-              "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'sm'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'md'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'lg'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'xl'",
-                    "computed": false
-                  }
-                ]
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'md'",
-                "computed": false
-              }
-            },
-            "options": {
-              "type": {
-                "name": "array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "[]",
-                "computed": false
-              }
-            },
-            "label": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
-                "computed": false
-              }
-            },
-            "update": {
-              "defaultValue": {
-                "value": "() => null",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "dist/Form/TextField/TextField.js",
       "value": [
         {
@@ -1100,6 +1060,77 @@
             "type": {
               "defaultValue": {
                 "value": "\"text\"",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "dist/Form/SelectField/SelectField.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SelectField",
+          "methods": [],
+          "actualName": "SelectField",
+          "props": {
+            "size": {
+              "type": {
+                "name": "enum",
+                "value": [
+                  {
+                    "value": "'sm'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'md'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'lg'",
+                    "computed": false
+                  },
+                  {
+                    "value": "'xl'",
+                    "computed": false
+                  }
+                ]
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'md'",
+                "computed": false
+              }
+            },
+            "options": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "label": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "update": {
+              "defaultValue": {
+                "value": "() => null",
                 "computed": false
               },
               "required": false
@@ -1209,6 +1240,41 @@
       ]
     },
     {
+      "key": "src/Components/Checkbox/Checkbox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Checkbox",
+          "methods": [],
+          "actualName": "Checkbox",
+          "props": {
+            "label": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "name": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/Components/Card/Card.jsx",
       "value": [
         {
@@ -1279,41 +1345,6 @@
               "description": "",
               "defaultValue": {
                 "value": "'default'",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/Components/Checkbox/Checkbox.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Checkbox",
-          "methods": [],
-          "actualName": "Checkbox",
-          "props": {
-            "label": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
-                "computed": false
-              }
-            },
-            "name": {
-              "type": {
-                "name": "string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
                 "computed": false
               }
             }
@@ -1442,6 +1473,44 @@
               "description": "",
               "defaultValue": {
                 "value": "'000'",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Components/Social/Social.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Social",
+          "methods": [
+            {
+              "name": "checkType",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "type",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Social",
+          "props": {
+            "socialList": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
                 "computed": false
               }
             }
@@ -1708,13 +1777,56 @@
       ]
     },
     {
-      "key": "src/Components/Form/Search/SearchField.jsx",
+      "key": "src/Components/Form/Search/SearchBar.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "SearchField",
+          "displayName": "SearchBar",
           "methods": [],
-          "actualName": "SearchField",
+          "actualName": "SearchBar",
+          "props": {
+            "placeholder": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'sm'",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Components/Form/Search/SearchFilter.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SearchFilter",
+          "methods": [
+            {
+              "name": "empty",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "SearchFilter",
           "props": {
             "placeholder": {
               "type": {

@@ -37,10 +37,34 @@ module.exports = {
             'src'  : '#'
         },
         {
+            "type" : "search",
+            "text" : "Type to search",
+            "align": "right"
+        },
+        {
+            "type" : "social",
+            "align": "right",
+            "items": [
+                {
+                    "type": "twitter",
+                    "src": '/'
+                },
+                {
+                    "type": "facebook",
+                    "src": '/'
+                },
+                {
+                    "type": "email",
+                    "src": '/'
+                }
+            ]
+        },
+        {
             "type" : "login",
             "text" : "Login",
             "align": "right"
-        }
+        },
+        
     ]
     
 }

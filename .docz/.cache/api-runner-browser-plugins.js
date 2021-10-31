@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('../../node_modules/gatsby-plugin-mdx/gatsby-browser.js'),
-      options: {"plugins":[],"extensions":[".md",".mdx"],"remarkPlugins":[[null,{"type":"yaml","marker":"-"}],null],"rehypePlugins":[null,null],"gatsbyRemarkPlugins":[],"defaultLayouts":{"default":"C:\\Users\\Matth\\Documents\\fish-ui\\node_modules\\gatsby-theme-docz\\src\\base\\Layout.js"},"lessBabel":false,"mediaTypes":["text/markdown","text/x-markdown"]},
+      options: {"plugins":[],"extensions":[".md",".mdx"],"remarkPlugins":[[null,{"type":"yaml","marker":"-"}],null],"rehypePlugins":[null,null],"gatsbyRemarkPlugins":[],"defaultLayouts":{"default":"C:\\Users\\Matth\\Documents\\fish-ui\\node_modules\\gatsby-theme-docz\\src\\base\\Layout.js"},"lessBabel":false,"mediaTypes":["text/markdown","text/x-markdown"],"root":"C:\\Users\\Matth\\Documents\\fish-ui\\.docz"},
     },{
       plugin: require('../../node_modules/gatsby-plugin-react-helmet-async/gatsby-browser.js'),
       options: {"plugins":[]},

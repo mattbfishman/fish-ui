@@ -5,10 +5,15 @@ import groupBy from 'lodash/groupBy';
 import * as Styles from './NavStyles';
 import {Link, BrowserRouter as Router} from "react-router-dom";
 import PropTypes from 'prop-types';
+import SearchBar from '../Form/Search/SearchBar';
+import Social from '../Social/Social';
 import {types} from '../../Constants/navTypes';
 const BRAND = types.BRAND,
       NAVLINK = types.NAVLINK,
       LOGIN = types.LOGIN,
+      SEARCH = types.SEARCH,
+      SOCIAL = types.SOCIAL,
+      SM = 'sm',
       ALIGN = 'align';
 
 const StyledNav = styled.nav`
@@ -28,9 +33,9 @@ const StyledNavGroup = styled.div`
     display: flex;
     flex-grow: 1;
     justify-content: ${props => props.align};
-    padding: 0px 40px;
     height: 100%;
     align-items: center;
+    flex: 1 1 0px;
 `
 
 const StyledLink = styled(Link)`
@@ -40,6 +45,9 @@ const StyledLink = styled(Link)`
         background: red;
     }
     ${Styles.NavItemBase};
+    &:last-of-type{
+        margin-right:10px;
+    }
 `
 
 const StyleLogin = styled.div`
@@ -50,6 +58,8 @@ const StyleLogin = styled.div`
 const StyledBrand = styled.div`
     font-size: 24px;
     font-weight: 600;
+    margin-left: 40px;
+
 `
 
 export default class Navbar extends React.Component {  
@@ -82,7 +92,7 @@ class NavItem extends Component{
             props       = (me && me.props) || {},
             text        = props.text,
             type        = props.type,
-            retEle, src, active;
+            retEle, src, active, items;
 
             if(type === BRAND) {
                 retEle = <StyledBrand>{text}</StyledBrand>;
@@ -92,9 +102,15 @@ class NavItem extends Component{
                 retEle = (
                     <StyledLink to={src} active={active}>{text}</StyledLink> 
                 )
-
             } else if(type === LOGIN){
                 retEle = <StyleLogin>{text}</StyleLogin>;
+            } else if(type === SEARCH){
+                retEle = <SearchBar placeholder={text} size={SM}/>;
+            } else if(type === SOCIAL){
+                items = props.items;
+                retEle = <Social socialList={items} />;
+            } else {
+                retEle = null;
             }
 
         
