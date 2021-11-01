@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import map from 'lodash/map';
 import groupBy from 'lodash/groupBy';
 import * as Styles from './NavStyles';
-import { BrowserRouter as Router } from "react-router-dom";
 import PropTypes from 'prop-types';
 import NavGroup from './NavGroup';
 const ALIGN = 'align';
@@ -34,10 +33,10 @@ export default class Navbar extends React.Component {
         txtColor: txtColor
       });
     });
-    return /*#__PURE__*/React.createElement(Router, null, /*#__PURE__*/React.createElement(StyledNav, {
+    return /*#__PURE__*/React.createElement(StyledNav, {
       bgColor: bgColor,
       txtColor: txtColor
-    }, /*#__PURE__*/React.createElement(StyledNavWrapper, null, navGroups)));
+    }, /*#__PURE__*/React.createElement(StyledNavWrapper, null, navGroups));
   }
 
 }

@@ -11,25 +11,28 @@ import img from './images/hero.png';
 // import {title, items} from './MockData/dropdown';
 // import {items} from './MockData/social';
 import {items} from './MockData/nav';
+import {BrowserRouter as Router} from "react-router-dom";
 class App extends Component {
 
     render(){
         return (
-        <div style={{width: "100%"}}>
-            <Navbar
-                bgColor={"black"}
-                txtColor={"gray"}
-                navItems={items}
-            />
-            <Hero 
-                height={640}
-                width={1920}
-                src={img}
-            />
-            {/* <Social
-                socialList={items}
-            /> */}
-        </div>
+        <Router>
+            <div style={{width: "100%"}}>
+                <Navbar
+                    bgColor={"black"}
+                    txtColor={"gray"}
+                    navItems={items}
+                />
+                <Hero 
+                    height={640}
+                    width={1920}
+                    src={img}
+                />
+                {/* <Social
+                    socialList={items}
+                /> */}
+            </div>
+        </Router>
         );
     }
 }

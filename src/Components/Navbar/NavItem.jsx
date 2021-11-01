@@ -73,6 +73,7 @@ export default class NavItem extends Component{
                 items = props.items;
                 retEle = <Social socialList={items} />;
             } else if(type === CART){
+                src = props.src;
                 retEle = <StyledCart to={src} txtColor={txtColor}><BsFillCartFill/></StyledCart>;
             } else {
                 retEle = null;
