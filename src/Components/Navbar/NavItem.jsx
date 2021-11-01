@@ -33,10 +33,15 @@ const BRAND = types.BRAND,
       ${Styles.NavItemBase};
   `
   
-  const StyledBrand = styled.div`
+  const StyledBrand = styled(Link)`
       font-size: 24px;
       font-weight: 600;
       margin-left: 40px;
+      ${Styles.NavItemBase};
+      color: gray;
+      &:hover{
+          color: gray;
+      }
   `
 
   const StyledCart = styled(Link)`
@@ -58,7 +63,8 @@ export default class NavItem extends Component{
             retEle, src, active, items;
 
             if(type === BRAND) {
-                retEle = <StyledBrand>{text}</StyledBrand>;
+                src = props.src;
+                retEle = <StyledBrand to={src}>{text}</StyledBrand>;
             } else if(type === NAVLINK){
                 src = props.src;
                 active = !!props.active;

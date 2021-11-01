@@ -3,6 +3,7 @@ module.exports = {
         {
             "type": "brand",
             "text" : "Fish UI",
+            "src"  : "/", 
             "align": "left"
         },
         {
