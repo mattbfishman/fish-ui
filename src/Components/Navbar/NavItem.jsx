@@ -37,7 +37,8 @@ const BRAND = types.BRAND,
       font-size: 24px;
       font-weight: 600;
       margin-left: 40px;
-      ${Styles.NavItemBase};
+      text-decoration: none;
+      cursor: pointer;
       color: gray;
       &:hover{
           color: gray;

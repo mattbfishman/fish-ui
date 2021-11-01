@@ -3,7 +3,7 @@
     "title": "Fish Ui Ac",
     "description": "My awesome app using docz",
     "menu": [],
-    "version": "0.1.22",
+    "version": "0.1.27",
     "repository": null,
     "native": false,
     "themeConfig": {},
@@ -166,37 +166,6 @@
       }
     },
     {
-      "key": "documentation/Components/Social/Social.mdx",
-      "value": {
-        "name": "Social",
-        "route": "/Social",
-        "id": "9d7de913937efc29064bf5fed8071596",
-        "filepath": "documentation/Components/Social/Social.mdx",
-        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Social\\Social.mdx",
-        "link": "",
-        "hidden": false,
-        "slug": "documentation-components-social-social",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "social",
-            "depth": 1,
-            "value": "Social"
-          },
-          {
-            "slug": "props",
-            "depth": 2,
-            "value": "Props"
-          },
-          {
-            "slug": "examples",
-            "depth": 2,
-            "value": "Examples"
-          }
-        ]
-      }
-    },
-    {
       "key": "documentation/Components/Navbar/Navbar.mdx",
       "value": {
         "name": "Navbar",
@@ -213,6 +182,37 @@
             "slug": "navbar",
             "depth": 1,
             "value": "Navbar"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          },
+          {
+            "slug": "examples",
+            "depth": 2,
+            "value": "Examples"
+          }
+        ]
+      }
+    },
+    {
+      "key": "documentation/Components/Social/Social.mdx",
+      "value": {
+        "name": "Social",
+        "route": "/Social",
+        "id": "9d7de913937efc29064bf5fed8071596",
+        "filepath": "documentation/Components/Social/Social.mdx",
+        "fullpath": "C:\\Users\\Matth\\Documents\\fish-ui\\documentation\\Components\\Social\\Social.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "documentation-components-social-social",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "social",
+            "depth": 1,
+            "value": "Social"
           },
           {
             "slug": "props",
@@ -685,6 +685,74 @@
       ]
     },
     {
+      "key": "dist/Hero/Hero.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Hero",
+          "methods": [],
+          "actualName": "Hero",
+          "props": {
+            "src": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "lazy": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "alt": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "height": {
+              "type": {
+                "name": "number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "width": {
+              "type": {
+                "name": "number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "dist/Navbar/Navbar.js",
       "value": [
         {
@@ -748,6 +816,76 @@
               "description": "",
               "defaultValue": {
                 "value": "'000'",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "dist/Navbar/NavGroup.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NavGroup",
+          "methods": [],
+          "actualName": "NavGroup",
+          "props": {
+            "group": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "dist/Navbar/NavItem.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NavItem",
+          "methods": [],
+          "actualName": "NavItem",
+          "props": {
+            "text": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "type": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "align": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'left'",
                 "computed": false
               }
             }
@@ -1538,6 +1676,74 @@
       ]
     },
     {
+      "key": "src/Components/Hero/Hero.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Hero",
+          "methods": [],
+          "actualName": "Hero",
+          "props": {
+            "src": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "lazy": {
+              "type": {
+                "name": "bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "alt": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "height": {
+              "type": {
+                "name": "number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "width": {
+              "type": {
+                "name": "number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/Components/Navbar/Navbar.jsx",
       "value": [
         {
@@ -1601,6 +1807,76 @@
               "description": "",
               "defaultValue": {
                 "value": "'000'",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Components/Navbar/NavGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NavGroup",
+          "methods": [],
+          "actualName": "NavGroup",
+          "props": {
+            "group": {
+              "type": {
+                "name": "array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/Components/Navbar/NavItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NavItem",
+          "methods": [],
+          "actualName": "NavItem",
+          "props": {
+            "text": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "type": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "align": {
+              "type": {
+                "name": "string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'left'",
                 "computed": false
               }
             }

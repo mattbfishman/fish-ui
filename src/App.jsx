@@ -10,6 +10,7 @@ import img from './images/hero.png';
 // import {footerLinks, title, quote, copyright} from './MockData/footer';
 // import {title, items} from './MockData/dropdown';
 // import {items} from './MockData/social';
+import Button from './Components/Button/Button';
 import {items} from './MockData/nav';
 import {BrowserRouter as Router} from "react-router-dom";
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
                     width={1920}
                     src={img}
                 />
+                <Button size={'lg'} label={'Explore All Products'} borderColor={"gray"} txtColor={"red"} height={100} width={500} borderWidth={10} />
                 {/* <Social
                     socialList={items}
                 /> */}

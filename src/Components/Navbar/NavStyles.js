@@ -8,7 +8,6 @@ export const navBase = css`
 export const NavItemBase = css`
     width: 100px;
     text-align: center;
-    display: block;
     text-decoration: none;
     height: 100%;
     display: flex;

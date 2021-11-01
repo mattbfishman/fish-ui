@@ -49561,7 +49561,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const StyledIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(react_icons_bs__WEBPACK_IMPORTED_MODULE_3__["BsSearch"])`
     position: absolute;
-    top: 22.5px;
+    transform: translate(0, 40%);
     margin-left: 5px;
 `;
 const StyledTextField = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_TextField_TextField__WEBPACK_IMPORTED_MODULE_4__["default"])`
@@ -50042,6 +50042,228 @@ if (typeof xl !== 'undefined' && xl && xl === Object(xl) && Object.isExtensible(
 
 /***/ }),
 
+/***/ "../src/Components/Navbar/NavGroup.jsx":
+/*!*********************************************!*\
+  !*** ../src/Components/Navbar/NavGroup.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NavGroup; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "../node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/map */ "lodash/map");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavItem */ "../src/Components/Navbar/NavItem.jsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+
+
+
+
+const StyledNavGroup = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+    display: flex;
+    flex-grow: 1;
+    justify-content: ${props => props.align};
+    height: 100%;
+    align-items: center;
+    flex: 1 1 0px;
+`;
+class NavGroup extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+  render() {
+    var me = this,
+        props = me && me.props || {},
+        group = props.group,
+        align = props.align,
+        txtColor = props.txtColor,
+        items = lodash_map__WEBPACK_IMPORTED_MODULE_3___default()(group, function (navItem, idx) {
+      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_NavItem__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        key: idx
+      }, navItem, {
+        txtColor: txtColor
+      }));
+    });
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_6__["jsx"])(StyledNavGroup, {
+      align: align
+    }, items);
+  }
+
+}
+
+if (typeof NavGroup !== 'undefined' && NavGroup && NavGroup === Object(NavGroup) && Object.isExtensible(NavGroup) && !NavGroup.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(NavGroup, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "NavGroup",
+      filename: "src/Components/Navbar/NavGroup.jsx"
+    }
+  });
+}
+
+NavGroup.propTypes = {
+  group: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.array
+};
+NavGroup.defaultProps = {
+  group: []
+};
+
+/***/ }),
+
+/***/ "../src/Components/Navbar/NavItem.jsx":
+/*!********************************************!*\
+  !*** ../src/Components/Navbar/NavItem.jsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NavItem; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Form_Search_SearchBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Form/Search/SearchBar */ "../src/Components/Form/Search/SearchBar.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "../node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Social_Social__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Social/Social */ "../src/Components/Social/Social.jsx");
+/* harmony import */ var _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Constants/navTypes */ "../src/Constants/navTypes.js");
+/* harmony import */ var _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _NavStyles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavStyles */ "../src/Components/Navbar/NavStyles.js");
+/* harmony import */ var react_icons_bs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-icons/bs */ "../node_modules/react-icons/bs/index.esm.js");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+
+
+
+
+
+
+
+
+
+
+const BRAND = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__["types"].BRAND,
+      NAVLINK = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__["types"].NAVLINK,
+      LOGIN = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__["types"].LOGIN,
+      SEARCH = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__["types"].SEARCH,
+      SOCIAL = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__["types"].SOCIAL,
+      CART = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_6__["types"].CART,
+      SM = 'sm';
+const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"])`
+      color: ${props => props.active ? 'white' : 'inherit'};
+      background-color : ${props => props.active ? 'red' : 'inherit'};
+      &:hover {
+          background: red;
+      }
+      ${_NavStyles__WEBPACK_IMPORTED_MODULE_7__["NavItemBase"]};
+      &:last-of-type{
+          margin-right:10px;
+      }
+  `;
+const StyleLogin = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
+      color: inherit;
+      ${_NavStyles__WEBPACK_IMPORTED_MODULE_7__["NavItemBase"]};
+  `;
+const StyledBrand = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"])`
+      font-size: 24px;
+      font-weight: 600;
+      margin-left: 40px;
+      text-decoration: none;
+      cursor: pointer;
+      color: gray;
+      &:hover{
+          color: gray;
+      }
+  `;
+const StyledCart = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"])`
+    color: ${props => props.txtColor};
+    padding-right: 40px;
+    &:hover{
+        color: white;
+    }
+  `;
+class NavItem extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    var me = this,
+        props = me && me.props || {},
+        text = props.text,
+        type = props.type,
+        txtColor = props.txtColor,
+        retEle,
+        src,
+        active,
+        items;
+
+    if (type === BRAND) {
+      src = props.src;
+      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(StyledBrand, {
+        to: src
+      }, text);
+    } else if (type === NAVLINK) {
+      src = props.src;
+      active = !!props.active;
+      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(StyledLink, {
+        to: src,
+        active: active
+      }, text);
+    } else if (type === LOGIN) {
+      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(StyleLogin, null, text);
+    } else if (type === SEARCH) {
+      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_Form_Search_SearchBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        placeholder: text,
+        size: SM
+      });
+    } else if (type === SOCIAL) {
+      items = props.items;
+      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(_Social_Social__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        socialList: items
+      });
+    } else if (type === CART) {
+      src = props.src;
+      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(StyledCart, {
+        to: src,
+        txtColor: txtColor
+      }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_9__["jsx"])(react_icons_bs__WEBPACK_IMPORTED_MODULE_8__["BsFillCartFill"], null));
+    } else {
+      retEle = null;
+    }
+
+    return retEle;
+  }
+
+}
+
+if (typeof NavItem !== 'undefined' && NavItem && NavItem === Object(NavItem) && Object.isExtensible(NavItem) && !NavItem.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(NavItem, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "NavItem",
+      filename: "src/Components/Navbar/NavItem.jsx"
+    }
+  });
+}
+
+NavItem.propTypes = {
+  text: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  type: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  align: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
+};
+NavItem.defaultProps = {
+  text: '',
+  type: '',
+  align: 'left'
+};
+
+/***/ }),
+
 /***/ "../src/Components/Navbar/NavStyles.js":
 /*!*********************************************!*\
   !*** ../src/Components/Navbar/NavStyles.js ***!
@@ -50083,7 +50305,6 @@ if (typeof navBase !== 'undefined' && navBase && navBase === Object(navBase) && 
 const NavItemBase = styled_components__WEBPACK_IMPORTED_MODULE_0__["css"]`
     width: 100px;
     text-align: center;
-    display: block;
     text-decoration: none;
     height: 100%;
     display: flex;
@@ -50127,23 +50348,18 @@ if (typeof NavItemBase !== 'undefined' && NavItemBase && NavItemBase === Object(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navbar; });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "../node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
-/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/map */ "lodash/map");
-/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash_groupBy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/groupBy */ "lodash/groupBy");
-/* harmony import */ var lodash_groupBy__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_groupBy__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _NavStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavStyles */ "../src/Components/Navbar/NavStyles.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "../node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _Form_Search_SearchBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Form/Search/SearchBar */ "../src/Components/Form/Search/SearchBar.jsx");
-/* harmony import */ var _Social_Social__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Social/Social */ "../src/Components/Social/Social.jsx");
-/* harmony import */ var _Constants_navTypes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../Constants/navTypes */ "../src/Constants/navTypes.js");
-/* harmony import */ var _Constants_navTypes__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_Constants_navTypes__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "../node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/map */ "lodash/map");
+/* harmony import */ var lodash_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_map__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_groupBy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/groupBy */ "lodash/groupBy");
+/* harmony import */ var lodash_groupBy__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_groupBy__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _NavStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavStyles */ "../src/Components/Navbar/NavStyles.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _NavGroup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NavGroup */ "../src/Components/Navbar/NavGroup.jsx");
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
 
 
 
@@ -50152,76 +50368,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-const BRAND = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_10__["types"].BRAND,
-      NAVLINK = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_10__["types"].NAVLINK,
-      LOGIN = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_10__["types"].LOGIN,
-      SEARCH = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_10__["types"].SEARCH,
-      SOCIAL = _Constants_navTypes__WEBPACK_IMPORTED_MODULE_10__["types"].SOCIAL,
-      SM = 'sm',
-      ALIGN = 'align';
-const StyledNav = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].nav`
-    ${_NavStyles__WEBPACK_IMPORTED_MODULE_5__["navBase"]};
+const ALIGN = 'align';
+const StyledNav = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav`
+    ${_NavStyles__WEBPACK_IMPORTED_MODULE_4__["navBase"]};
     background: ${props => props.bgColor};
     color: ${props => props.txtColor};
 `;
-const StyledNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
+const StyledNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div`
     display: flex;
     align-items: center;
     height: 100%;
     width: 100%;
 `;
-const StyledNavGroup = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
-    display: flex;
-    flex-grow: 1;
-    justify-content: ${props => props.align};
-    height: 100%;
-    align-items: center;
-    flex: 1 1 0px;
-`;
-const StyledLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"])`
-    color: ${props => props.active ? 'white' : 'inherit'};
-    background-color : ${props => props.active ? 'red' : 'inherit'};
-    &:hover {
-        background: red;
-    }
-    ${_NavStyles__WEBPACK_IMPORTED_MODULE_5__["NavItemBase"]};
-    &:last-of-type{
-        margin-right:10px;
-    }
-`;
-const StyleLogin = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
-    color: inherit;
-    ${_NavStyles__WEBPACK_IMPORTED_MODULE_5__["NavItemBase"]};
-`;
-const StyledBrand = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
-    font-size: 24px;
-    font-weight: 600;
-    margin-left: 40px;
-
-`;
-class Navbar extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+class Navbar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   render() {
     var me = this,
         props = me && me.props || {},
         bgColor = props.bgColor,
         txtColor = props.txtColor,
         navItems = props.navItems,
-        groupedNavItems = lodash_groupBy__WEBPACK_IMPORTED_MODULE_4___default()(navItems, ALIGN),
-        navGroups = lodash_map__WEBPACK_IMPORTED_MODULE_3___default()(groupedNavItems, function (group, key) {
-      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(NavGroup, {
+        groupedNavItems = lodash_groupBy__WEBPACK_IMPORTED_MODULE_3___default()(navItems, ALIGN),
+        navGroups = lodash_map__WEBPACK_IMPORTED_MODULE_2___default()(groupedNavItems, function (group, key) {
+      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(_NavGroup__WEBPACK_IMPORTED_MODULE_6__["default"], {
         key: key,
         group: group,
-        align: key
+        align: key,
+        txtColor: txtColor
       });
     });
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["BrowserRouter"], null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyledNav, {
+    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledNav, {
       bgColor: bgColor,
       txtColor: txtColor
-    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyledNavWrapper, null, navGroups)));
+    }, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_7__["jsx"])(StyledNavWrapper, null, navGroups));
   }
 
 }
@@ -50237,88 +50415,11 @@ if (typeof Navbar !== 'undefined' && Navbar && Navbar === Object(Navbar) && Obje
 }
 
 ;
-
-class NavItem extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
-  render() {
-    var me = this,
-        props = me && me.props || {},
-        text = props.text,
-        type = props.type,
-        retEle,
-        src,
-        active,
-        items;
-
-    if (type === BRAND) {
-      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyledBrand, null, text);
-    } else if (type === NAVLINK) {
-      src = props.src;
-      active = !!props.active;
-      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyledLink, {
-        to: src,
-        active: active
-      }, text);
-    } else if (type === LOGIN) {
-      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyleLogin, null, text);
-    } else if (type === SEARCH) {
-      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_Form_Search_SearchBar__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        placeholder: text,
-        size: SM
-      });
-    } else if (type === SOCIAL) {
-      items = props.items;
-      retEle = Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(_Social_Social__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        socialList: items
-      });
-    } else {
-      retEle = null;
-    }
-
-    return retEle;
-  }
-
-}
-
-NavItem.propTypes = {
-  text: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string,
-  type: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string,
-  align: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string
-};
-NavItem.defaultProps = {
-  text: '',
-  type: '',
-  align: 'left'
-};
-
-class NavGroup extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
-  render() {
-    var me = this,
-        props = me && me.props || {},
-        group = props.group,
-        align = props.align,
-        items = lodash_map__WEBPACK_IMPORTED_MODULE_3___default()(group, function (navItem, idx) {
-      return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(NavItem, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        key: idx
-      }, navItem));
-    });
-    return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_11__["jsx"])(StyledNavGroup, {
-      align: align
-    }, items);
-  }
-
-}
-
-NavGroup.propTypes = {
-  group: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.array
-};
-NavGroup.defaultProps = {
-  group: []
-};
 Navbar.propTypes = {
-  navItems: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.array,
-  theme: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.oneOf(['default', 'success', 'danger']),
-  bgColor: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string,
-  txtColor: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string
+  navItems: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array,
+  theme: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.oneOf(['default', 'success', 'danger']),
+  bgColor: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
+  txtColor: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string
 };
 Navbar.defaultProps = {
   navItems: [],
@@ -50461,7 +50562,8 @@ module.exports = {
     NAVLINK: "navLink",
     LOGIN: 'login',
     SEARCH: 'search',
-    SOCIAL: 'social'
+    SOCIAL: 'social',
+    CART: 'cart'
   }
 };
 
@@ -50646,53 +50748,63 @@ module.exports = {
   "items": [{
     "type": "brand",
     "text": "Fish UI",
+    "src": "/",
     "align": "left"
   }, {
     "type": "navLink",
     "text": "Home",
     "align": "center",
-    'src': '#'
+    'src': '/'
   }, {
     "type": "navLink",
     "text": "About Us",
     "align": "center",
-    'src': '#',
+    'src': '/',
     'active': true
   }, {
     "type": "navLink",
     "text": "FAQ",
     "align": "center",
-    'src': '#'
+    'src': '/'
   }, {
     "type": "navLink",
     "text": "Contact",
     "align": "center",
-    'src': '#'
+    'src': '/'
   }, {
     "type": "navLink",
     "text": "FAQ",
     "align": "center",
-    'src': '#'
+    'src': '/'
   }, {
     "type": "search",
     "text": "Type to search",
     "align": "right"
-  }, {
-    "type": "social",
-    "align": "right",
-    "items": [{
-      "type": "twitter",
-      "src": '/'
-    }, {
-      "type": "facebook",
-      "src": '/'
-    }, {
-      "type": "email",
-      "src": '/'
-    }]
-  }, {
+  }, // {
+  //     "type" : "social",
+  //     "align": "right",
+  //     "items": [
+  //         {
+  //             "type": "twitter",
+  //             "src": '/'
+  //         },
+  //         {
+  //             "type": "facebook",
+  //             "src": '/'
+  //         },
+  //         {
+  //             "type": "email",
+  //             "src": '/'
+  //         }
+  //     ]
+  // },
+  {
     "type": "login",
     "text": "Login",
+    "align": "right"
+  }, {
+    "type": "cart",
+    'src': '/',
     "align": "right"
   }]
 };
