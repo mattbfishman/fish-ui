@@ -4,6 +4,8 @@ import Card from './Components/Card/Card';
 import Footer from './Components/Footer/Footer';
 // import SearchField from './Components/Form/Search/SearchFilter';
 import Navbar from './Components/Navbar/Navbar';
+import Hero from './Components/Hero/Hero';
+import img from './images/hero.png';
 // import Social from './Components/Social/Social';
 // import {footerLinks, title, quote, copyright} from './MockData/footer';
 // import {title, items} from './MockData/dropdown';
@@ -18,6 +20,11 @@ class App extends Component {
                 bgColor={"black"}
                 txtColor={"gray"}
                 navItems={items}
+            />
+            <Hero 
+                height={640}
+                width={1920}
+                src={img}
             />
             {/* <Social
                 socialList={items}
