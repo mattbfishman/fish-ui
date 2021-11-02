@@ -13,23 +13,26 @@ import img from './images/hero.png';
 import Button from './Components/Button/Button';
 import {items} from './MockData/nav';
 import {BrowserRouter as Router} from "react-router-dom";
+import Banner from './Components/Banner/Banner';
+import buttonData from './MockData/button';
 class App extends Component {
 
     render(){
         return (
         <Router>
             <div style={{width: "100%"}}>
-                <Navbar
+                <Banner title={"Big Sale!"} subTitle={`Use Promo Code "Fall20" To Save 20% Off At checkout`} button={buttonData} />
+                {/* <Navbar
                     bgColor={"black"}
                     txtColor={"gray"}
                     navItems={items}
-                />
-                <Hero 
+                /> */}
+                {/* <Hero 
                     height={640}
                     width={1920}
                     src={img}
-                />
-                <Button size={'lg'} label={'Explore All Products'} borderColor={"gray"} txtColor={"red"} height={100} width={500} borderWidth={10} />
+                /> */}
+                {/* <Button size={'lg'} label={'Explore All Products'} borderColor={"gray"} txtColor={"red"} height={100} width={500} borderWidth={10} /> */}
                 {/* <Social
                     socialList={items}
                 /> */}

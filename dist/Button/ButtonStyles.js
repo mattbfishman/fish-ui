@@ -2,15 +2,9 @@ import { css } from 'styled-components';
 /* styles common to all buttons */
 
 export const buttonBase = css`
-    background: #fff;
     border-radius: 5px;
     border: 1px solid lightgray;
-    color: #737373;
     outline: none;
-    &:hover{
-        color: black;
-        background-position: left;
-    }
 `;
 /* size variants */
 

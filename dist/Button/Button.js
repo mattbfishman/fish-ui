@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 const StyledButton = styled.button`
     ${Styles.buttonBase};
     ${props => Styles[props.size]};
-    border-color: ${props => props.borderColor === 'white' ? 'lightgray' : props.color};
-    color: ${props => props.txtColor ? props.txtColor : 'black'};
+    border-color: ${props => props.borderColor};
+    color: ${props => props.txtColor};
+    background: ${props => props.bgColor};
     ${({
   height
 }) => height && `
@@ -22,6 +23,14 @@ const StyledButton = styled.button`
 }) => borderWidth && `
         border-width: ${borderWidth}px;
     `}
+    ${({
+  borderWidth
+}) => borderWidth && `
+        border-width: ${borderWidth}px;
+    `}
+    &:hover{
+        color: ${props => props.hoverColor};;
+    }
 `;
 export default class Button extends React.Component {
   render() {
@@ -43,12 +52,16 @@ Button.propTypes = {
   txtColor: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
-  borderWidth: PropTypes.number
+  borderWidth: PropTypes.number,
+  bgColor: PropTypes.string
 };
 Button.defaultProps = {
   size: 'md',
   onClick: () => null,
   variant: 'default',
-  borderColor: 'white',
-  borderWidth: 1
+  borderColor: 'lightgray',
+  txtColor: 'black',
+  bgColor: 'white',
+  borderWidth: 1,
+  hoverColor: ''
 };
