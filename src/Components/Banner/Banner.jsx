@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const StyledBanner = styled.div`
     height: 300px;
-    width: 100vw;
+    width: 100%;
     background: ${props => props.bgColor};
 `
 
@@ -37,8 +37,6 @@ class Banner extends Component {
         var me          = this,
             props       = (me && me.props) || {},
             {title, subTitle, titleColor, bgColor, subTitleColor, button} = props;
-
-            console.log(props);
 
         return (
             <StyledBanner bgColor={bgColor}>
