@@ -22,7 +22,8 @@ const StyledButton = styled.button`
         border-width: ${borderWidth}px;
     `}
     &:hover{
-        color: ${props => props.hoverColor};;
+        color: ${props => props.hoverColor};
+        background: ${props => props.bghoverColor};
     }
 `
 
@@ -48,7 +49,8 @@ Button.propTypes = {
     height: PropTypes.number,
     width: PropTypes.number,
     borderWidth : PropTypes.number,
-    bgColor: PropTypes.string
+    bgColor: PropTypes.string,
+    bghoverColor : PropTypes.string
 }
 
 Button.defaultProps = {
@@ -59,5 +61,6 @@ Button.defaultProps = {
     txtColor: 'black',
     bgColor: 'white',
     borderWidth: 1,
-    hoverColor: ''
+    hoverColor: '',
+    bghoverColor: ''
 }

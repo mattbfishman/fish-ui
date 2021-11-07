@@ -9,7 +9,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
 import img from './images/hero.png';
 // import Social from './Components/Social/Social';
-// import {footerLinks, title, quote, copyright} from './MockData/footer';
+import {footerLinks, title, quote, copyright} from './MockData/footer';
 // import {title, items} from './MockData/dropdown';
 // import {items} from './MockData/social';
 import Button from './Components/Button/Button';
@@ -54,7 +54,8 @@ class App extends Component {
                     width={1920}
                     src={img}
                 /> */}
-                {/* <Button size={'lg'} label={'Explore All Products'} borderColor={"gray"} txtColor={"red"} height={100} width={500} borderWidth={10} /> */}
+                <Button size={'lg'} label={'Explore All Products'} borderColor={"gray"} txtColor={"red"} height={100} width={500} borderWidth={10} bghoverColor={"red"}/>
+                <Footer title={title} quote={quote} columns={footerLinks} copyright={copyright}/> */
                 {/* <Social
                     socialList={items}
                 /> */}

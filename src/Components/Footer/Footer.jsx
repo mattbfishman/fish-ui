@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
     display: flex;
     flex-direction: row;
     width: 100%;
