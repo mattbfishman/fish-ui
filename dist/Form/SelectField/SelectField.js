@@ -17,6 +17,7 @@ export default class SelectField extends React.Component {
         update = props.update,
         size = props.size,
         options = props.options,
+        className = props.className,
         optionsEle = map(options, function (option, index) {
       return /*#__PURE__*/React.createElement("option", {
         key: index,
@@ -24,7 +25,8 @@ export default class SelectField extends React.Component {
       }, option.label);
     });
     return /*#__PURE__*/React.createElement(StyledSelectField, {
-      size: size
+      size: size,
+      className: className
     }, /*#__PURE__*/React.createElement("label", null, label, ":"), /*#__PURE__*/React.createElement("select", {
       onBlur: update
     }, optionsEle));

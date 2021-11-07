@@ -1,6 +1,6 @@
 {
   "name": "fish-ui-ac",
-  "version": "0.1.30",
+  "version": "0.1.31",
   "private": false,
   "dependencies": {
     "babel-loader": "^8.1.0",

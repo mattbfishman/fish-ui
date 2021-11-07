@@ -19,12 +19,13 @@ export default class SelectField extends React.Component {
             update      = props.update,
             size        = props.size,
             options     = props.options,
+            className   = props.className,
             optionsEle  = map(options, function(option, index){
                 return <option key={index} value={option.value}>{option.label}</option>;
             });
 
         return (
-            <StyledSelectField size={size}>
+            <StyledSelectField size={size} className={className}>
                 <label>{label}:</label>
                 <select onBlur={update}>
                     {optionsEle}
