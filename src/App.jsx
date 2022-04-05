@@ -41,7 +41,10 @@ class App extends Component {
         let className = this.props.className;
         return (
         <Router>
-            <div style={{width: "100%"}}>
+            <h1 className="text-3xl font-bold underline">
+                Hello world!
+            </h1>
+            {/* <div style={{width: "100%"}}> */}
                 <Banner title={"Big Sale!"} subTitle={`Use Promo Code "Fall20" To Save 20% Off At checkout`} button={buttonData} />
                 <StyledSelect label={"Quantity"} options={options} size={"md"}/>
                 {/* <Navbar
@@ -54,12 +57,12 @@ class App extends Component {
                     width={1920}
                     src={img}
                 /> */}
-                <Button size={'lg'} label={'Explore All Products'} borderColor={"gray"} txtColor={"red"} height={100} width={500} borderWidth={10} bghoverColor={"red"}/>
-                <Footer title={title} quote={quote} columns={footerLinks} copyright={copyright}/> */
+                {/* <Button size={'lg'} label={'Explore All Products'} borderColor={"gray"} txtColor={"red"} height={100} width={500} borderWidth={10} bghoverColor={"red"}/>
+                <Footer title={title} quote={quote} columns={footerLinks} copyright={copyright}/>  */}
                 {/* <Social
                     socialList={items}
                 /> */}
-            </div>
+            {/* </div> */}
         </Router>
         );
     }

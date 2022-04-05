@@ -38,7 +38,6 @@ export default class Button extends React.Component {
     var me = this,
         props = me && me.props || {},
         label = props.label;
-    console.log(props.animations);
     return /*#__PURE__*/React.createElement(StyledButton, props, label);
   }
 

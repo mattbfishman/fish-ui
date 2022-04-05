@@ -18,6 +18,7 @@ export default class SelectField extends React.Component {
         size = props.size,
         options = props.options,
         className = props.className,
+        onChange = props.onChange,
         optionsEle = map(options, function (option, index) {
       return /*#__PURE__*/React.createElement("option", {
         key: index,
@@ -28,7 +29,8 @@ export default class SelectField extends React.Component {
       size: size,
       className: className
     }, /*#__PURE__*/React.createElement("label", null, label, ":"), /*#__PURE__*/React.createElement("select", {
-      onBlur: update
+      onBlur: update,
+      onChange: onChange
     }, optionsEle));
   }
 
@@ -37,11 +39,13 @@ export default class SelectField extends React.Component {
 SelectField.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
   options: PropTypes.array,
-  label: PropTypes.string
+  label: PropTypes.string,
+  onChange: PropTypes.func
 };
 SelectField.defaultProps = {
   options: [],
   label: '',
   size: 'md',
-  update: () => null
+  update: () => null,
+  onChange: () => null
 };

@@ -24,16 +24,16 @@ Hero.propTypes = {
     src: PropTypes.string,
     lazy: PropTypes.bool,
     alt: PropTypes.string,
-    height: PropTypes.number,
-    width: PropTypes.number
+    height: PropTypes.string,
+    width: PropTypes.string
 }
 
 Hero.defaultProps = {
     src: '',
     lazy: false,
     alt: '',
-    width: 0,
-    height: 0
+    width: "0",
+    height: "0"
 }
 
 export default Hero;

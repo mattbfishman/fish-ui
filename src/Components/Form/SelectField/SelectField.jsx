@@ -20,6 +20,7 @@ export default class SelectField extends React.Component {
             size        = props.size,
             options     = props.options,
             className   = props.className,
+            onChange    = props.onChange,
             optionsEle  = map(options, function(option, index){
                 return <option key={index} value={option.value}>{option.label}</option>;
             });
@@ -27,7 +28,7 @@ export default class SelectField extends React.Component {
         return (
             <StyledSelectField size={size} className={className}>
                 <label>{label}:</label>
-                <select onBlur={update}>
+                <select onBlur={update} onChange={onChange}>
                     {optionsEle}
                 </select>
             </StyledSelectField>
@@ -39,6 +40,7 @@ SelectField.propTypes = {
     size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
     options: PropTypes.array,
     label  : PropTypes.string,
+    onChange: PropTypes.func
 }
 
 SelectField.defaultProps = {
@@ -46,4 +48,5 @@ SelectField.defaultProps = {
     label: '',
     size: 'md',
     update: () => null,
+    onChange: () => null
 }
