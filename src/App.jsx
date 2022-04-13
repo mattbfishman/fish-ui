@@ -5,7 +5,7 @@ import Login from './Components/Form/Login/Login';
 import Card from './Components/Card/Card';
 import Footer from './Components/Footer/Footer';
 // import SearchField from './Components/Form/Search/SearchFilter';
-import Navbar from './Components/Navbar/Navbar';
+import Navbar from './Components/Navbar/MobileNav';
 import Hero from './Components/Hero/Hero';
 import img from './images/hero.png';
 // import Social from './Components/Social/Social';
@@ -41,17 +41,17 @@ class App extends Component {
         let className = this.props.className;
         return (
         <Router>
-            <h1 className="text-3xl font-bold underline">
+            {/* <h1 className="text-3xl font-bold underline">
                 Hello world!
-            </h1>
+            </h1> */}
             {/* <div style={{width: "100%"}}> */}
-                <Banner title={"Big Sale!"} subTitle={`Use Promo Code "Fall20" To Save 20% Off At checkout`} button={buttonData} />
-                <StyledSelect label={"Quantity"} options={options} size={"md"}/>
-                {/* <Navbar
+                {/* <Banner title={"Big Sale!"} subTitle={`Use Promo Code "Fall20" To Save 20% Off At checkout`} button={buttonData} /> */}
+                {/* <StyledSelect label={"Quantity"} options={options} size={"md"}/> */}
+                <Navbar
                     bgColor={"black"}
                     txtColor={"gray"}
                     navItems={items}
-                /> */}
+                />
                 {/* <Hero 
                     height={640}
                     width={1920}
