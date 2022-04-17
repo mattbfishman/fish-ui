@@ -6,6 +6,8 @@ import {GiHamburgerMenu} from 'react-icons/gi';
 import { BsSearch, BsFillCartFill, BsPersonCircle } from 'react-icons/bs';
 import {Link} from "react-router-dom";
 
+const A = 'A';
+
 const StyledNav = styled.nav`
    background: black;
    width: 100vw;
@@ -40,6 +42,7 @@ const StyledTitleContainer = styled.div`
 const StyledTitle = styled.h1`
     margin: 0 10px;
     width: 100%;
+    min-width: 100px;
 `
 
 const StyledInnerMenu = styled.div`
@@ -68,32 +71,31 @@ const StyledNavItem = styled.li`
 const StyledIconBar = styled.div`
     width: 100%;
     display: flex;
-    justify-content: flex-end;
     margin-right: 20px;
+    justify-content: flex-end;
 `
 
 const StyledSearch = styled(BsSearch)`
     width: 24px;
     height: 24px;
-    padding: 10px;
+    padding: 15px;
 `
 
 const StyledLogin = styled(BsPersonCircle)`
     width: 24px;
     height: 24px;
-    padding: 10px;
+    padding: 15px;
 `
 
 const StyledCart = styled(BsFillCartFill)`
     width: 24px;
     height: 24px;
-    padding: 10px;
+    padding: 15px;
 `
 
 const StyledLink = styled(Link)`
     color: white;
     text-decoration: none;
-    width: 100%;
 `
 
 
@@ -104,6 +106,7 @@ export default class MobileNav extends React.Component {
             show: false
         };
         this.toggleHidden = this.toggleHidden.bind(this);
+        this.toggleShow = this.toggleShow.bind(this);
     }
     
     toggleHidden(){
@@ -111,9 +114,28 @@ export default class MobileNav extends React.Component {
             state   = me && me.state,
             show    = state && state.show;
 
-        this.setState({
+        me.setState({
             show: !show
         });
+    }
+
+    toggleShow(e){
+        var me       = this,
+            state    = me && me.state,
+            show     = state && state.show,
+            {target} = e,
+            parentElement, nodeName;
+
+        if(target && show) {
+            parentElement = target && target.parentElement || {};
+            nodeName = parentElement && parentElement.nodeName || {};
+            console.log(nodeName);
+            if(nodeName === A && show){
+                me.setState({
+                    show: false
+                });
+            }
+        }
     }
 
     render() {
@@ -121,6 +143,7 @@ export default class MobileNav extends React.Component {
             props        = (me && me.props) || {},
             state        = (me && me.state) || {},
             toggleHidden = me && me.toggleHidden,
+            toggleShow   = me && me.toggleShow,
             show         = state && state.show,
             navItems     = props.navItems,
             brand        = find(navItems, ['type', 'brand']),
@@ -137,7 +160,7 @@ export default class MobileNav extends React.Component {
             });
 
         return (
-            <StyledNav>
+            <StyledNav onClick={(e) => toggleShow(e)}>
                 <StyledTitleContainer>
                     <StyledHamburger onClick={toggleHidden}> <StyledIcon show/></StyledHamburger>
                     <StyledLink to={brand.src}><StyledTitle>{text}</StyledTitle></StyledLink>
