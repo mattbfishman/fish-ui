@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import {find} from 'lodash';
+import {find, map} from 'lodash';
 import PropTypes from 'prop-types';
 import {GiHamburgerMenu} from 'react-icons/gi';
+import { BsSearch, BsFillCartFill, BsPersonCircle } from 'react-icons/bs';
+import {Link} from "react-router-dom";
 
 const StyledNav = styled.nav`
    background: black;
@@ -26,7 +28,7 @@ const StyledHamburger = styled.button`
 const StyledIcon = styled(GiHamburgerMenu)`
     height: 30px;
     width: 30px;
-    color: ${props => props.show == true ? 'gray' : 'white'};
+    color: ${props => props.show === true ? 'gray' : 'white'};
 `
 
 const StyledTitleContainer = styled.div`
@@ -37,6 +39,7 @@ const StyledTitleContainer = styled.div`
 
 const StyledTitle = styled.h1`
     margin: 0 10px;
+    width: 100%;
 `
 
 const StyledInnerMenu = styled.div`
@@ -57,7 +60,40 @@ const StyledNavList = styled.ul`
 
 const StyledNavItem = styled.li`
     margin: 10px 0;
+    cursor: pointer;
+    padding: 10px 0 10px 5px;
 `
+
+const StyledIconBar = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+`
+
+const StyledSearch = styled(BsSearch)`
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+`
+
+const StyledLogin = styled(BsPersonCircle)`
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+`
+
+const StyledCart = styled(BsFillCartFill)`
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+`
+
+const StyledLink = styled(Link)`
+    color: white;
+    text-decoration: none;
+`
+
 
 export default class MobileNav extends React.Component {  
     constructor(props){
@@ -85,22 +121,35 @@ export default class MobileNav extends React.Component {
             toggleHidden = me && me.toggleHidden,
             show         = state && state.show,
             navItems     = props.navItems,
-            brand        = find(navItems, ['type', 'brand']) || {},
-            text         = brand.text || '';
+            brand        = find(navItems, ['type', 'brand']),
+            login        = find(navItems, ['type', 'login']),
+            cart         = find(navItems, ['type', 'cart']),
+            search       = find(navItems, ['type', 'search']),
+            text         = brand.text || '',
+            navLinks     = map(navItems, function(item, idx){
+                if(item && item.type === 'navLink'){
+                    let text = item.text || '',
+                        src  = item.src || '#';
+                    return <StyledLink to={src}><StyledNavItem key={idx}>{text}</StyledNavItem></StyledLink>
+                }
+            });
 
         return (
             <StyledNav>
                 <StyledTitleContainer>
-                    <StyledHamburger onClick={toggleHidden}> <StyledIcon show={show} /> </StyledHamburger>
+                    <StyledHamburger onClick={toggleHidden}> <StyledIcon show/></StyledHamburger>
                     <StyledTitle>{text}</StyledTitle>
+                    <StyledIconBar>
+                        {search && <StyledLink to={search.src}><StyledSearch/></StyledLink> }
+                        {login && <StyledLink to={login.src}><StyledLogin/></StyledLink>}
+                        {cart && <StyledLink to={cart.src}><StyledCart/></StyledLink>}
+                    </StyledIconBar>
                 </StyledTitleContainer>
                 {show &&
                     <StyledInnerMenuContainer>
                         <StyledInnerMenu>
                             <StyledNavList>
-                                <StyledNavItem>test</StyledNavItem>
-                                <StyledNavItem>test</StyledNavItem>
-                                <StyledNavItem>test</StyledNavItem>
+                                {navLinks}
                             </StyledNavList>
                         </StyledInnerMenu>
                     </StyledInnerMenuContainer>
