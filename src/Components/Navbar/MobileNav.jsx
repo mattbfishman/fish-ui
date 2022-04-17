@@ -50,6 +50,7 @@ const StyledInnerMenu = styled.div`
 const StyledInnerMenuContainer = styled.div`
     background: black;
     width: 100%;
+    z-index: 99;
 `
 
 const StyledNavList = styled.ul`
@@ -92,6 +93,7 @@ const StyledCart = styled(BsFillCartFill)`
 const StyledLink = styled(Link)`
     color: white;
     text-decoration: none;
+    width: 100%;
 `
 
 
@@ -138,7 +140,7 @@ export default class MobileNav extends React.Component {
             <StyledNav>
                 <StyledTitleContainer>
                     <StyledHamburger onClick={toggleHidden}> <StyledIcon show/></StyledHamburger>
-                    <StyledTitle>{text}</StyledTitle>
+                    <StyledLink to={brand.src}><StyledTitle>{text}</StyledTitle></StyledLink>
                     <StyledIconBar>
                         {search && <StyledLink to={search.src}><StyledSearch/></StyledLink> }
                         {login && <StyledLink to={login.src}><StyledLogin/></StyledLink>}
