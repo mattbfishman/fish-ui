@@ -42,7 +42,7 @@ const StyledTitleContainer = styled.div`
 const StyledTitle = styled.h1`
     margin: 0 10px;
     width: 100%;
-    min-width: 100px;
+    min-width: 150px;
 `
 
 const StyledInnerMenu = styled.div`
@@ -90,7 +90,7 @@ const StyledLogin = styled(BsPersonCircle)`
 const StyledCart = styled(BsFillCartFill)`
     width: 24px;
     height: 24px;
-    padding: 15px;
+    padding: 10px;
 `
 
 const StyledLink = styled(Link)`

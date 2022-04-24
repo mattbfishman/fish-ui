@@ -8,6 +8,9 @@ const StyledBanner = styled.div`
     height: 300px;
     width: 100%;
     background: ${props => props.bgColor};
+    @media (max-width: 1200px) {
+        height: 350px;
+    }
 `
 
 const StyledTitle = styled.h2`
