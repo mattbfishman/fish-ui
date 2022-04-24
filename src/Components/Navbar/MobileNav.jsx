@@ -90,7 +90,7 @@ const StyledLogin = styled(BsPersonCircle)`
 const StyledCart = styled(BsFillCartFill)`
     width: 24px;
     height: 24px;
-    padding: 10px;
+    padding: 15px;
 `
 
 const StyledLink = styled(Link)`
